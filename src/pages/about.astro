@@ -1,0 +1,158 @@
+---
+import Layout from '../layouts/BlogPost.astro';
+---
+
+<Layout
+    title="關於我們"
+    description="T-Vetas Network 致力於成為台灣最可靠的基礎建設服務商"
+    pubDate={new Date('2016-01-01')}
+    heroImage="/about-hero.jpg"
+>
+    <div class="about-container">
+        <section class="company-intro">
+            <h2>公司沿革</h2>
+            <p>
+                成立於2016年的 T-Vetas Network,擁有超過10年以上的團隊專業經驗。我們專注於提供企業級數據中心、
+                機房建置、電力系統與網路解決方案等全方位服務。
+            </p>
+        </section>
+
+        <section class="core-values">
+            <h2>核心價值</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <h3>專業可靠</h3>
+                    <p>擁有豐富的亞太地區調試經驗</p>
+                </div>
+                <div class="value-card">
+                    <h3>創新技術</h3>
+                    <p>持續引進先進解決方案</p>
+                </div>
+                <div class="value-card">
+                    <h3>完善服務</h3>
+                    <p>一站式的基礎建設服務</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="contact-info">
+            <h2>聯絡我們</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>業務諮詢</h3>
+                    <p>Alpha</p>
+                    <p>電話: 0910-663118</p>
+                    <p>Email: alpha@vetastech.com</p>
+                </div>
+                
+                <div class="contact-card">
+                    <h3>技術支援</h3>
+                    <p>服務時間: 週一至週五 09:00-18:00</p>
+                    <p>緊急支援專線: (02)xxxx-xxxx</p>
+                </div>
+
+                <div class="contact-card">
+                    <h3>公司地址</h3>
+                    <p>114 台北市內湖區堤頂大道二段283號3樓</p>
+                    <div class="map-wrapper">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.6883931254256!2d121.56317797592709!3d25.078548536495166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ad000eb08a09%3A0x46e92eabbd8dafac!2z5Y-w54Gj57at54m557ay6Lev6IKh5Lu95pyJ6ZmQ5YWs5Y-4!5e0!3m2!1szh-TW!2stw!4v1744875550151!5m2!1szh-TW!2stw" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</Layout>
+
+<style>
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.value-card {
+    padding: 2rem;
+    background: #f5f7fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.contact-card {
+    padding: 2rem;
+    background: #f5f7fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden; /* 確保地圖不會溢出卡片 */
+}
+
+.contact-card h3 {
+    color: #1A2A47;
+    margin-bottom: 1rem;
+}
+
+.contact-card p {
+    margin-bottom: 0.5rem;
+    color: #4a5568;
+}
+
+.map-container {
+    margin-top: 1rem;
+    height: 200px;
+    background: #e2e8f0;
+    border-radius: 4px;
+}
+
+.map-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 比例 */
+    height: 0;
+    margin-top: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.map-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+@media (max-width: 640px) {
+    .about-container {
+        padding: 1rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .map-wrapper {
+        padding-bottom: 75%; /* 在手機上使用更高的比例 */
+    }
+}
+</style>

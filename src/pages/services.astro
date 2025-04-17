@@ -1,0 +1,66 @@
+---
+import Layout from '../layouts/BlogPost.astro';
+---
+
+<Layout
+    title="服務項目"
+    description="專業的數據中心與企業機房解決方案"
+    pubDate={new Date()}
+    heroImage="/services-hero.jpg"
+>
+    <div class="services-container">
+        <div class="service-card">
+            <h2>數據中心與企業機房</h2>
+            <ul>
+                <li>IT線纜收容系統</li>
+                <li>高架地板安裝</li>
+                <li>機櫃規劃與建置</li>
+            </ul>
+        </div>
+
+        <div class="service-card">
+            <h2>電力系統</h2>
+            <ul>
+                <li>UPS安裝與維護</li>
+                <li>電力系統規劃</li>
+                <li>發電機系統</li>
+            </ul>
+        </div>
+
+        <div class="service-card">
+            <h2>結構化佈線</h2>
+            <ul>
+                <li>光纖布線</li>
+                <li>網路線布建</li>
+                <li>線路認證測試</li>
+            </ul>
+        </div>
+    </div>
+</Layout>
+
+<style>
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.service-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+</style>
+
+src/
+  components/
+    Header.astro      // 導航欄
+    Footer.astro      // 頁尾
+    ContactForm.astro  // 聯絡表單
+    ClientLogo.astro  // 客戶logo組件
+  styles/
+    global.css        // 全域樣式
+  assets/
+    images/          // 圖片資源
