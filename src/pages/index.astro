@@ -6,45 +6,128 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+<html lang="zh-TW">
+    <head>
+        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    </head>
+    <body>
+        <Header />
+        <main>
+            <div class="hero-section">
+                <div class="logo-container">
+                    <img src="/logo.jpg" alt="T-Vetas Network Logo" />
+                </div>
+                <div class="title-container">
+                    <h1 class="company-name">台灣維特網路</h1>
+                    <h1 class="company-name-en">T-Vetas Network</h1>
+                </div>
+            </div>
+            <p>
+                Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
+                template serves as a lightweight, minimally-styled starting point for anyone looking to build
+                a personal website, blog, or portfolio with Astro.
+            </p>
+            <p>
+                This template comes with a few integrations already configured in your
+                <code>astro.config.mjs</code> file. You can customize your setup with
+                <a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
+                React, or Vue to your project.
+            </p>
+            <p>Here are a few ideas on how to get started with the template:</p>
+            <ul>
+                <li>Edit this page in <code>src/pages/index.astro</code></li>
+                <li>Edit the site header items in <code>src/components/Header.astro</code></li>
+                <li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
+                <li>Check out the included blog posts in <code>src/content/blog/</code></li>
+                <li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
+            </ul>
+            <p>
+                Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
+                    >read the docs
+                </a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
+            </p>
+            <p>
+                Looking for a blog template with a bit more personality? Check out <a
+                    href="https://github.com/Charca/astro-blog-template"
+                    >astro-blog-template
+                </a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
+            </p>
+        </main>
+        <Footer />
+    </body>
 </html>
+
+<style>
+    .hero-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        min-height: 300px; /* 確保有足夠的高度 */
+    }
+
+    .logo-container {
+        flex-shrink: 0;
+        width: 200px; /* 固定 logo 容器寬度 */
+    }
+
+    .logo-container img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .title-container {
+        flex-grow: 1; /* 允許標題容器成長 */
+        text-align: center;
+        min-width: 400px; /* 確保有最小寬度 */
+    }
+
+    .company-name,
+    .company-name-en {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0;
+        color: #1A2A47;
+        line-height: 1.2;
+    }
+
+    .company-name {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .company-name-en {
+        font-size: 2rem;
+    }
+
+    @media (max-width: 768px) {
+        .hero-section {
+            flex-direction: column;
+            padding: 1rem;
+            min-height: auto;
+        }
+
+        .logo-container {
+            width: 150px;
+        }
+
+        .title-container {
+            min-width: unset; /* 移除最小寬度限制 */
+            width: 100%;
+            padding: 0 1rem;
+        }
+
+        .company-name {
+            font-size: 2rem;
+        }
+
+        .company-name-en {
+            font-size: 1.5rem;
+        }
+    }
+</style>
