@@ -1,0 +1,209 @@
+---
+import Layout from '../layouts/BlogPost.astro';
+---
+
+<Layout
+    title="參考案例"
+    description="我們在電信與數據中心基礎建設領域的成功案例"
+    pubDate={new Date('2024-04-17')}
+>
+    <div class="references-container">
+        <h1 class="main-title">歷年重要專案實績</h1>
+
+        <section class="reference-section">
+            <h2>2024 進行中專案</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3>國際電信傳輸專案</h3>
+                    <ul class="project-details">
+                        <li>支援超過 30 個 Infinera 專案測試 (台灣及亞洲地區)</li>
+                        <li>支援超過 15 個 Ciena 專案測試 (香港及台灣)</li>
+                    </ul>
+                </article>
+                <article class="project-card">
+                    <h3>大型數據中心專案</h3>
+                    <ul class="project-details">
+                        <li>Meta Smarthands支援服務</li>
+                        <li>Meta 網路纜線佈放工程</li>
+                        <li>微軟數據中心電信建置工程</li>
+                        <li>微軟網路設備光纖佈放工程</li>
+                        <li>AXX 網路設備光纖佈放工程</li>
+                    </ul>
+                </article>
+                <article class="project-card">
+                    <h3>基礎設施更新專案</h3>
+                    <ul class="project-details">
+                        <li>Telstra CCTV 更換工程</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="reference-section">
+            <h2>2023 年度專案</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3>國際傳輸網路建設</h3>
+                    <ul class="project-details">
+                        <li>支援超過 20 個 Infinera 專案測試 (台灣及亞洲地區)</li>
+                        <li>支援超過 10 個 Ciena 專案測試 (香港地區)</li>
+                    </ul>
+                </article>
+                <article class="project-card">
+                    <h3>企業客戶服務</h3>
+                    <ul class="project-details">
+                        <li>Meta Smarthands支援服務</li>
+                        <li>微軟數據中心電信建置工程</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="reference-section">
+            <h2>2022 年度專案</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3>設備測試與支援</h3>
+                    <ul class="project-details">
+                        <li>支援超過 22 個 Infinera 專案測試 (台灣及亞洲地區)</li>
+                        <li>支援超過 15 個 Ciena 專案測試 (香港地區)</li>
+                        <li>Meta Smarthands支援服務</li>
+                    </ul>
+                </article>
+                <article class="project-card">
+                    <h3>網路升級專案</h3>
+                    <ul class="project-details">
+                        <li>全國有線電視 IP 骨幹網路整改</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="reference-section">
+            <h2>2017-2021 重點專案</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3>國際客戶合作專案</h3>
+                    <ul class="project-details">
+                        <li>Meta/Facebook Smarthands支援服務 (2017-2021)</li>
+                        <li>AT&T 亞太區網路設備建置與擴充</li>
+                        <li>Telstra 亞洲區傳輸設備安裝與測試</li>
+                    </ul>
+                </article>
+                <article class="project-card">
+                    <h3>設備建置與擴充</h3>
+                    <ul class="project-details">
+                        <li>Infinera DTNX/XT/MTC 設備建置與擴充</li>
+                        <li>Ciena 6500/Waveserver 設備建置案</li>
+                        <li>PCCW 歐洲 SDH/WDM 設備建置案</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="reference-section">
+            <h2>2016 創始年度專案</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3>首年重點專案</h3>
+                    <ul class="project-details">
+                        <li>ECCOM 杜拜 IDC 網路建置</li>
+                        <li>Infinera 香港、台灣 DTNX 設備擴充</li>
+                        <li>Facebook Smarthands支援服務</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+    </div>
+</Layout>
+
+<style>
+.references-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.main-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #1A2A47;
+    margin-bottom: 3rem;
+}
+
+.reference-section {
+    margin-bottom: 4rem;
+}
+
+.reference-section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1A2A47;
+    margin-bottom: 2rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.project-card h3 {
+    color: #1A2A47;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.project-details {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.project-details li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+    color: #4a5568;
+}
+
+.project-details li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #FF7A00;
+}
+
+@media (max-width: 768px) {
+    .references-container {
+        padding: 1rem;
+    }
+
+    .main-title {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .reference-section h2 {
+        font-size: 1.25rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        padding: 1.5rem;
+    }
+}
+</style>
