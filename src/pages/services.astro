@@ -5,52 +5,144 @@ import Layout from '../layouts/BlogPost.astro';
 <Layout
     title="服務項目"
     description="專業的數據中心與企業機房解決方案"
-    pubDate={new Date()}
-    heroImage="/services-hero.jpg"
+    pubDate={new Date('2024-04-17')}
 >
-    <div class="services-container">
-        <div class="service-card">
-            <h2>數據中心與企業機房</h2>
-            <ul>
-                <li>IT線纜收容系統</li>
-                <li>高架地板安裝</li>
-                <li>機櫃規劃與建置</li>
-            </ul>
-        </div>
+    <section class="services-container">
+        <h2 class="section-title">我們的核心業務範圍</h2>
+        <p class="section-description">
+            T-Vetas Network 以高品質、適用且具成本效益的工程服務和最佳解決方案聞名，豐富的專案經驗讓我們在業界處於領先地位。
+        </p>
 
-        <div class="service-card">
-            <h2>電力系統</h2>
-            <ul>
-                <li>UPS安裝與維護</li>
-                <li>電力系統規劃</li>
-                <li>發電機系統</li>
-            </ul>
-        </div>
+        <div class="services-grid">
+            <article class="service-card">
+                <h3>數據中心與企業機房</h3>
+                <ul>
+                    <li>IT 佈線槽道與專用光纖管道系統</li>
+                    <li>共用機房隔間與機櫃隔間</li>
+                    <li>高架地板系統設計與安裝</li>
+                    <li>機櫃、機架與配線架規劃與配置</li>
+                </ul>
+            </article>
 
-        <div class="service-card">
-            <h2>結構化佈線</h2>
-            <ul>
-                <li>光纖布線</li>
-                <li>網路線布建</li>
-                <li>線路認證測試</li>
-            </ul>
+            <article class="service-card">
+                <h3>電力系統</h3>
+                <ul>
+                    <li>AC 與 DC 電源設計、供應與安裝</li>
+                    <li>整流器（Rectifier）、UPS、ATS、STS 配置</li>
+                    <li>備用電池系統規劃與佈署</li>
+                    <li>電力系統測試與現場調試</li>
+                </ul>
+            </article>
+
+            <article class="service-card">
+                <h3>結構化佈線</h3>
+                <ul>
+                    <li>Cat5e / Cat6 / Cat6a 銅纜佈線系統</li>
+                    <li>單模 OS1 & OS2、多模 OM1/OM2/OM3/OM4 光纖佈線</li>
+                    <li>現場測試、認證與調試服務</li>
+                </ul>
+            </article>
+
+            <article class="service-card">
+                <h3>網路解決方案</h3>
+                <ul>
+                    <li>資料/語音網路設計、實施、調試與整合</li>
+                    <li>光傳輸專業：SDH / WDM / IP / GPON 解決方案</li>
+                    <li>Cisco、Huawei、Infinera、Ciena 等品牌設備整合</li>
+                </ul>
+            </article>
+
+            <article class="service-card full-width">
+                <h3>設備安裝與調試</h3>
+                <p class="highlight-text">
+                    我們在 <strong>Infinera 設備</strong>（超過 100 個專案經驗）及 <strong>Ciena 設備</strong>（超過 50 個專案經驗）上的現場調試尤為專精，並提供：
+                </p>
+                <ul>
+                    <li>路由器／交換機設備安裝與配置</li>
+                    <li>線槽與光纖導槽現場佈署</li>
+                    <li>機架、CommScope's OMX 機櫃與 ODF 安裝</li>
+                    <li>客製化底座與支架工程</li>
+                </ul>
+            </article>
         </div>
-    </div>
+    </section>
 </Layout>
 
 <style>
 .services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #1A2A47;
+    margin-bottom: 1rem;
+}
+
+.section-description {
+    text-align: center;
+    color: #4a5568;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    line-height: 1.6;
+}
+
+.services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
 }
 
 .service-card {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1A2A47;
+    margin-bottom: 1rem;
+}
+
+.service-card ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: #4a5568;
+}
+
+.service-card li {
+    margin-bottom: 0.5rem;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+.highlight-text {
+    color: #4a5568;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: span 1;
+    }
+
+    .services-container {
+        padding: 3rem 1rem;
+    }
 }
 </style>
 

@@ -3,38 +3,56 @@ import Layout from '../layouts/BlogPost.astro';
 ---
 
 <Layout
-    title="關於我們"
+    title="關於T-Vetas Network"
     description="T-Vetas Network 致力於成為台灣最可靠的基礎建設服務商"
-    pubDate={new Date('2016-01-01')}
-    heroImage="/about-hero.jpg"
+    pubDate={new Date('2024-04-17')}
 >
     <div class="about-container">
         <section class="company-intro">
-            <h2>公司沿革</h2>
+            <p class="intro-text">
+                T-Vetas Network 成立於 <strong>2016 年</strong>，總部位於台灣。公司由一群在電信工程、電機工程、機械工程及專案交付與管理領域擁有豐富實務經驗的工程師所創立，
+                目標是為亞太區各大電信與企業客戶提供 <em>高品質、可擴展且具成本效益</em> 的基礎設施建置與管理服務。
+            </p>
+        </section>
+
+        <section class="team-expertise">
+            <h2>團隊專業實力</h2>
             <p>
-                成立於2016年的 T-Vetas Network,擁有超過10年以上的團隊專業經驗。我們專注於提供企業級數據中心、
-                機房建置、電力系統與網路解決方案等全方位服務。
+                我們的大部分成員皆擁有 <strong>10 年以上</strong> 電信產業經驗，涵蓋
+                <span class="service-flow">規劃設計 → 施工安裝 → 現場調試 → 持續維運</span> 
+                的完整服務流程，累積多項大型數據中心及跨國光纖傳輸專案成功案例。
+            </p>
+        </section>
+
+        <section class="vision">
+            <h2>公司願景</h2>
+            <p>
+                成為 <strong>台灣最可靠的電信、企業與數據中心基礎設施構建和管理服務供應商</strong>，並持續拓展亞太市場，為客戶提供一站式的關鍵基礎架構解決方案。
             </p>
         </section>
 
         <section class="core-values">
-            <h2>核心價值</h2>
-            <div class="values-grid">
-                <div class="value-card">
-                    <h3>專業可靠</h3>
-                    <p>擁有豐富的亞太地區調試經驗</p>
-                </div>
-                <div class="value-card">
-                    <h3>創新技術</h3>
-                    <p>持續引進先進解決方案</p>
-                </div>
-                <div class="value-card">
-                    <h3>完善服務</h3>
-                    <p>一站式的基礎建設服務</p>
-                </div>
-            </div>
+            <h2>核心價值與理念</h2>
+            <ul class="values-list">
+                <li>洞悉市場對 <strong>專業材料採購與工程承包</strong> 的需求，提供即時且可靠的供應服務。</li>
+                <li>以 <strong>合理成本</strong> 交付 <strong>高品質、適用</strong> 的工程與技術解決方案。</li>
+                <li>與客戶及合作夥伴建立長期互信，共同 <strong>創造並累積價值</strong>。</li>
+            </ul>
         </section>
 
+        <section class="company-scale">
+            <h2>在台灣的堅實陣容</h2>
+            <p>
+                我們在台擁有 <strong>15 名直屬員工</strong> 以及 <strong>3 名以上間接支援人員</strong>，確保在地專案能以最高效率與品質完成。
+            </p>
+        </section>
+
+        <section class="branch-info">
+            <h2>台北分公司</h2>
+            <p>
+                台北分公司專責 <strong>設計、安裝與調試</strong> 服務，快速響應台灣及周邊區域的客戶需求，並協同總部資源，為每一個專案提供完整技術支援與後續維運。
+            </p>
+        </section>
 
         <section class="contact-info">
             <h2>聯絡我們</h2>
@@ -49,7 +67,8 @@ import Layout from '../layouts/BlogPost.astro';
                 <div class="contact-card">
                     <h3>技術支援</h3>
                     <p>服務時間: 週一至週五 09:00-18:00</p>
-                    <p>緊急支援專線: (02)xxxx-xxxx</p>
+                    <p>緊急支援專線:<br>
+                    070-101-85099</p>
                 </div>
 
                 <div class="contact-card">
@@ -74,7 +93,53 @@ import Layout from '../layouts/BlogPost.astro';
 .about-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 5rem 2rem;
+}
+
+.main-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #1A2A47;
+    margin-bottom: 1.5rem;
+}
+
+section {
+    margin-bottom: 4rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1A2A47;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.service-flow {
+    white-space: nowrap;
+    color: #1A2A47;
+    font-weight: 500;
+}
+
+.values-list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: #4a5568;
+    line-height: 1.7;
+}
+
+.values-list li {
+    margin-bottom: 0.75rem;
+}
+
+strong {
+    color: #1A2A47;
 }
 
 .values-grid {
@@ -140,6 +205,25 @@ import Layout from '../layouts/BlogPost.astro';
     width: 100%;
     height: 100%;
     border: none;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        padding: 3rem 1rem;
+    }
+
+    .main-title {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    .service-flow {
+        display: block;
+        margin: 0.5rem 0;
+    }
 }
 
 @media (max-width: 640px) {

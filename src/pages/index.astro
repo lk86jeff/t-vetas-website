@@ -20,38 +20,63 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                 <div class="title-container">
                     <h1 class="company-name">台灣維特網路</h1>
                     <h1 class="company-name-en">T-Vetas Network</h1>
+                    <p class="company-intro">
+                        2016 年於台灣成立，專注提供電信工程設計、安裝與調試服務，並為亞太地區的 VETAS 專案提供專業現場支援。
+                    </p>
                 </div>
             </div>
-            <p>
-                Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-                template serves as a lightweight, minimally-styled starting point for anyone looking to build
-                a personal website, blog, or portfolio with Astro.
-            </p>
-            <p>
-                This template comes with a few integrations already configured in your
-                <code>astro.config.mjs</code> file. You can customize your setup with
-                <a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-                React, or Vue to your project.
-            </p>
-            <p>Here are a few ideas on how to get started with the template:</p>
-            <ul>
-                <li>Edit this page in <code>src/pages/index.astro</code></li>
-                <li>Edit the site header items in <code>src/components/Header.astro</code></li>
-                <li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-                <li>Check out the included blog posts in <code>src/content/blog/</code></li>
-                <li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-            </ul>
-            <p>
-                Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-                    >read the docs
-                </a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-            </p>
-            <p>
-                Looking for a blog template with a bit more personality? Check out <a
-                    href="https://github.com/Charca/astro-blog-template"
-                    >astro-blog-template
-                </a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-            </p>
+
+            <section class="content-section">
+                <h2>我們的核心價值與理念</h2>
+                <p>
+                    T-Vetas Network 致力於以合理成本提供高品質、客製化工程服務，並持續追求最佳解決方案，滿足客戶多樣化需求。
+                </p>
+            </section>
+
+            <section class="content-section bg-gray">
+                <h2>目標客群</h2>
+                <p>
+                    我們的服務對象涵蓋全球電信運營商、數據中心營運商與各類企業網路基礎設施，無論新建或擴容，都能提供完整支援。
+                </p>
+            </section>
+
+            <section class="content-section">
+                <h2>服務亮點</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>數據中心與企業機房</h3>
+                        <p>機櫃與高架地板系統、專用光纖管道、橋架、配線架設計與調試。</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>網路解決方案</h3>
+                        <p>SDH / WDM / IP / GPON 網路規劃、實施、整合與測試。</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>結構化佈線</h3>
+                        <p>Cat6A & 光纖 (OS1/OM4) 佈線系統設計、測試與現場調試。</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>電力系統</h3>
+                        <p>AC / DC 電源設計、UPS、ATS、備用電池與測試調試服務。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section bg-gray">
+                <h2>重要客戶與合作夥伴</h2>
+                <div class="clients-list">
+                    <div class="client-category">
+                        <ul>
+                            <li>Microsoft </li>
+                            <li>AT&T Global Network Solutions</li>
+                            <li>PCCW Global</li>
+                            <li>Telstra</li>
+                            <li>Reach</li>
+                            <li>Facebook (Meta)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
         </main>
         <Footer />
     </body>
@@ -105,6 +130,105 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
         font-size: 2rem;
     }
 
+    .company-intro {
+        margin-top: 1rem;
+        font-size: 1.1rem;
+        color: #4a5568;
+        max-width: 600px;
+        line-height: 1.6;
+    }
+
+    .content-section {
+        padding: 4rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .bg-gray {
+        background-color: #f7fafc;
+    }
+
+    .content-section h2 {
+        font-size: 1.8rem;
+        color: #1A2A47;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    .content-section p {
+        color: #4a5568;
+        line-height: 1.7;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .service-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .service-card h3 {
+        color: #1A2A47;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .clients-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .client-category h3 {
+        color: #1A2A47;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .client-category ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .client-category li {
+        padding: 0.5rem 0;
+        color: #4a5568;
+        position: relative;
+        padding-left: 1.5rem;
+    }
+
+    .client-category li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #FF7A00;
+    }
+
+    .clients-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 2rem;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .clients-grid img {
+        max-width: 150px;
+        height: auto;
+        margin: 0 auto;
+    }
+
     @media (max-width: 768px) {
         .hero-section {
             flex-direction: column;
@@ -128,6 +252,22 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
         .company-name-en {
             font-size: 1.5rem;
+        }
+
+        .content-section {
+            padding: 2rem 1rem;
+        }
+
+        .services-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .clients-list {
+            grid-template-columns: 1fr;
+        }
+
+        .clients-grid {
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 </style>
