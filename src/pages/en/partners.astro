@@ -1,0 +1,159 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+    title="客戶與合作夥伴"
+    description="與全球頂尖企業合作，提供最優質的基礎建設服務"
+    lang="en"
+>
+    <div class="partners-container">
+        <section class="partners-section">
+            <h2>要換英文......國際客戶</h2>
+            <div class="logo-grid">
+                <div class="logo-card">
+                    <img src="/partners/microsoft.png" alt="Microsoft" />
+                    <p>Microsoft</p>
+                </div>
+                <div class="logo-card">
+                    <img src="/partners/meta.png" alt="Meta" />
+                    <p>Meta</p>
+                </div>
+                <div class="logo-card">
+                    <img src="/partners/att.png" alt="AT&T Global Network Solutions" />
+                    <p>AT&T Global Network Solutions</p>
+                </div>
+                <div class="logo-card">
+                    <img src="/partners/pccw.png" alt="PCCW Global" />
+                    <p>PCCW Global</p>
+                </div>
+                <div class="logo-card">
+                    <img src="/partners/telstra.png" alt="Telstra" />
+                    <p>Telstra</p>
+                </div>
+                <div class="logo-card">
+                    <img src="/partners/reach.png" alt="Reach" />
+                    <p>Reach</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="partners-section">
+            <h2>台灣客戶</h2>
+            <div class="logo-grid">
+                <div class="logo-card">
+                    <img src="/partners/pchome.png" alt="PCHOME" />
+                    <p>PCHOME</p>
+                </div>
+                <div class="logo-card">
+                    <img src="/partners/defang.png" alt="Defang cable TV" />
+                    <p>Defang cable TV</p>
+                </div>
+                <div class="logo-card">
+                    <img src="/partners/fet.png" alt="FET Telecom" />
+                    <p>FET Telecom</p>
+                </div>
+                <div class="logo-card">
+                    <img src="/partners/acts.png" alt="ACTS" />
+                    <p>ACTS</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="partners-section">
+            <h2>設備與服務合作夥伴</h2>
+            <div class="logo-grid">
+                <div class="logo-card">
+                    <img src="/partners/ciena.png" alt="Ciena" />
+                    <p>Ciena</p>
+                </div>
+                <div class="logo-card">
+                    <img src="/partners/infinera.png" alt="Infinera" />
+                    <p>Infinera</p>
+                </div>
+                <div class="logo-card">
+                    <img src="/partners/hwacom.png" alt="Hwa Com" />
+                    <p>Hwa Com</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="partners-section">
+            <h2>供應商</h2>
+            <div class="logo-grid">
+                <div class="logo-card">
+                    <img src="/partners/jpc.png" alt="JPC" />
+                    <p>JPC (光纖材料/GBIC)</p>
+                </div>
+                <div class="logo-card">
+                    <img src="/partners/wesco.png" alt="WESCO" />
+                    <p>WESCO (電信材料)</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</Layout>
+
+<style>
+.partners-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.partners-section {
+    margin-bottom: 4rem;
+}
+
+.partners-section h2 {
+    color: #1A2A47;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    align-items: center;
+}
+
+.logo-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.logo-card:hover {
+    transform: translateY(-5px);
+}
+
+.logo-card img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.logo-card p {
+    color: #4a5568;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+    .partners-container {
+        padding: 1rem;
+    }
+
+    .logo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .logo-card img {
+        max-width: 100px;
+    }
+}
+</style>

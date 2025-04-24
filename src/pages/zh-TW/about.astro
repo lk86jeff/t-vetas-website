@@ -1,0 +1,254 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+    title="關於我們"
+    description="T-Vetas Network 致力於成為台灣最可靠的基礎建設服務商"
+    lang="zh-TW"
+>
+    <div class="about-container">
+        <h1 class="main-title">關於我們</h1>
+        
+        <section class="company-intro">
+            <p class="intro-text">
+                T-Vetas Network 成立於 <strong>2016 年</strong>，總部位於台灣。公司由一群在電信工程、電機工程、機械工程及專案交付與管理領域擁有豐富實務經驗的工程師所創立，
+                目標是為亞太區各大電信與企業客戶提供 <em>高品質、可擴展且具成本效益</em> 的基礎設施建置與管理服務。
+            </p>
+        </section>
+
+        <section class="team-expertise">
+            <h2>團隊專業實力</h2>
+            <p>
+                我們的大部分成員皆擁有 <strong>10 年以上</strong> 電信產業經驗，涵蓋
+                <span class="service-flow">規劃設計 → 施工安裝 → 現場調試 → 持續維運</span> 
+                的完整服務流程，累積多項大型數據中心及跨國光纖傳輸專案成功案例。
+            </p>
+        </section>
+
+        <section class="vision">
+            <h2>公司願景</h2>
+            <p>
+                成為 <strong>台灣最可靠的電信、企業與數據中心基礎設施構建和管理服務供應商</strong>，並持續拓展亞太市場，為客戶提供一站式的關鍵基礎架構解決方案。
+            </p>
+        </section>
+
+        <section class="core-values">
+            <h2>核心價值與理念</h2>
+            <ul class="values-list">
+                <li>洞悉市場對 <strong>專業材料採購與工程承包</strong> 的需求，提供即時且可靠的供應服務。</li>
+                <li>以 <strong>合理成本</strong> 交付 <strong>高品質、適用</strong> 的工程與技術解決方案。</li>
+                <li>與客戶及合作夥伴建立長期互信，共同 <strong>創造並累積價值</strong>。</li>
+            </ul>
+        </section>
+
+        <section class="company-scale">
+            <h2>在台灣的堅實陣容</h2>
+            <p>
+                我們在台擁有 <strong>15 名直屬員工</strong> 以及 <strong>3 名以上間接支援人員</strong>，確保在地專案能以最高效率與品質完成。
+            </p>
+        </section>
+
+        <section class="branch-info">
+            <h2>台北分公司</h2>
+            <p>
+                台北分公司專責 <strong>設計、安裝與調試</strong> 服務，快速響應台灣及周邊區域的客戶需求，並協同總部資源，為每一個專案提供完整技術支援與後續維運。
+            </p>
+        </section>
+
+        <section class="contact-info">
+            <h2>聯絡我們</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>業務諮詢</h3>
+                    <p>電話: 070-101-85099</p>
+                    <p>Email: alpha@vetastech.com</p>
+                    <p>服務時間: 週一至週五 09:00-18:00</p>
+                </div>
+
+                <div class="contact-card">
+                    <h3>公司地址</h3>
+                    <p>114 台北市內湖區堤頂大道二段283號3樓</p>
+                    <div class="map-wrapper">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.6883931254256!2d121.56317797592709!3d25.078548536495166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ad000eb08a09%3A0x46e92eabbd8dafac!2z5Y-w54Gj57at54m557ay6Lev6IKh5Lu95pyJ6ZmQ5YWs5Y-4!5e0!3m2!1szh-TW!2stw!4v1744875550151!5m2!1szh-TW!2stw" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</Layout>
+
+<style>
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+}
+
+.main-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #1A2A47;
+    margin-bottom: 1.5rem;
+}
+
+section {
+    margin-bottom: 4rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1A2A47;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.service-flow {
+    white-space: nowrap;
+    color: #1A2A47;
+    font-weight: 500;
+}
+
+.values-list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: #4a5568;
+    line-height: 1.7;
+}
+
+.values-list li {
+    margin-bottom: 0.75rem;
+}
+
+strong {
+    color: #1A2A47;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.value-card {
+    padding: 2rem;
+    background: #f5f7fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.contact-card {
+    padding: 2rem;
+    background: #f5f7fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden; /* 確保地圖不會溢出卡片 */
+}
+
+.contact-card h3 {
+    color: #1A2A47;
+    margin-bottom: 1rem;
+}
+
+.contact-card p {
+    margin-bottom: 0.5rem;
+    color: #4a5568;
+}
+
+.map-container {
+    margin-top: 1rem;
+    height: 200px;
+    background: #e2e8f0;
+    border-radius: 4px;
+}
+
+.map-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 比例 */
+    height: 0;
+    margin-top: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.map-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #1A2A47;
+    margin-bottom: 1rem;
+}
+
+.page-description {
+    text-align: center;
+    color: #4a5568;
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        padding: 3rem 1rem;
+    }
+
+    .main-title {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    .service-flow {
+        display: block;
+        margin: 0.5rem 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .about-container {
+        padding: 1rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .map-wrapper {
+        padding-bottom: 75%; /* 在手機上使用更高的比例 */
+    }
+}
+</style>

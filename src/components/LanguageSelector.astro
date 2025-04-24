@@ -1,0 +1,47 @@
+---
+import { languages } from '../consts';
+
+const { pathname } = Astro.url;
+const currentPath = pathname.split('/');
+const currentLang = currentPath[1] || 'zh-TW';
+
+// 取得實際的頁面路徑
+const pagePath = currentPath.slice(2).join('/');
+console.log('Current Lang:', currentLang, 'Page Path:', pagePath); // 用於除錯
+---
+
+<div class="language-selector">
+    {Object.entries(languages).map(([lang, label]) => (
+        <a 
+            href={`/${lang}/${pagePath}`}
+            class={`lang-link ${currentLang === lang ? 'active' : ''}`}
+        >
+            {label}
+        </a>
+    ))}
+</div>
+
+<style>
+    .language-selector {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .lang-link {
+        color: #4a5568;
+        text-decoration: none;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-size: 0.875rem;
+    }
+
+    .lang-link:hover {
+        background-color: #f7fafc;
+    }
+
+    .lang-link.active {
+        color: #FF7A00;
+        font-weight: 500;
+    }
+</style>

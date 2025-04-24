@@ -1,15 +1,16 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import { defaultLang } from '../consts';
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import { getCollection } from 'astro:content';
+import FormattedDate from '../../components/FormattedDate.astro';
 
-return Astro.redirect(`/${defaultLang}`);
+
 ---
 
 <!doctype html>
-<html lang="zh-TW">
+<html lang="en">
     <head>
         <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     </head>
@@ -21,7 +22,6 @@ return Astro.redirect(`/${defaultLang}`);
                     <img src="/logo.jpg" alt="T-Vetas Network Logo" />
                 </div>
                 <div class="title-container">
-                    <h1 class="company-name">台灣維特網路</h1>
                     <h1 class="company-name-en">T-Vetas Network</h1>
                     <p class="company-intro">
                         2016 年於台灣成立，專注提供電信工程設計、安裝與調試服務，並為亞太地區的 VETAS 專案提供專業現場支援。
