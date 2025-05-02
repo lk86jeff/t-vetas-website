@@ -10,31 +10,15 @@ import Layout from '../../layouts/Layout.astro';
     <div class="partners-container">
         <section class="partners-section">
             <h2>國際客戶</h2>
-            <div class="logo-grid">
-                <div class="logo-card">
-                    <img src="/partners/microsoft.png" alt="Microsoft" />
-                    <p>Microsoft</p>
-                </div>
-                <div class="logo-card">
-                    <img src="/partners/meta.png" alt="Meta" />
-                    <p>Meta</p>
-                </div>
-                <div class="logo-card">
-                    <img src="/partners/att.png" alt="AT&T Global Network Solutions" />
-                    <p>AT&T Global Network Solutions</p>
-                </div>
-                <div class="logo-card">
-                    <img src="/partners/pccw.png" alt="PCCW Global" />
-                    <p>PCCW Global</p>
-                </div>
-                <div class="logo-card">
-                    <img src="/partners/telstra.png" alt="Telstra" />
-                    <p>Telstra</p>
-                </div>
-                <div class="logo-card">
-                    <img src="/partners/reach.png" alt="Reach" />
-                    <p>Reach</p>
-                </div>
+            <div class="clients-list">
+                <ul>
+                    <li>Microsoft</li>
+                    <li>Meta (Facebook)</li>
+                    <li>AT&T Global Network Solutions</li>
+                    <li>PCCW Global</li>
+                    <li>Telstra</li>
+                    <li>Reach</li>
+                </ul>
             </div>
         </section>
 
@@ -142,6 +126,30 @@ import Layout from '../../layouts/Layout.astro';
     font-size: 0.9rem;
 }
 
+.clients-list {
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.clients-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.clients-list li {
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    color: #1A2A47;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.clients-list li:last-child {
+    border-bottom: none;
+}
+
 @media (max-width: 640px) {
     .partners-container {
         padding: 1rem;
@@ -154,6 +162,15 @@ import Layout from '../../layouts/Layout.astro';
 
     .logo-card img {
         max-width: 100px;
+    }
+
+    .clients-list {
+        padding: 1rem;
+    }
+
+    .clients-list li {
+        font-size: 1rem;
+        padding: 0.75rem 0;
     }
 }
 </style>
