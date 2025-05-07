@@ -7,12 +7,15 @@ import { SITE_TITLE, navItems } from '../consts';
 const currentPath = Astro.url.pathname;
 const lang = currentPath.split('/')[1] || 'zh-TW';
 const nav = navItems[lang];
-console.log('Current Language from URL:', lang); // 用於除錯
 ---
 
 <header>
     <nav>
-        <h2><a href={`/${lang}`}>{SITE_TITLE}</a></h2>
+        <h2>
+            <a href={`/${lang}`} class="logo-link">
+                <img src="/logo_ball.jpg" alt="T-Vetas Network Logo" class="logo-image" />
+            </a>
+        </h2>
         <div class="internal-links">
             <HeaderLink href={`/${lang}`}>{nav.home}</HeaderLink>
             <HeaderLink href={`/${lang}/services`}>{nav.services}</HeaderLink>
@@ -23,6 +26,7 @@ console.log('Current Language from URL:', lang); // 用於除錯
         <LanguageSelector />
     </nav>
 </header>
+
 <style>
     header {
         margin: 0;
@@ -62,5 +66,18 @@ console.log('Current Language from URL:', lang); // 用於除錯
         .social-links {
             display: none;
         }
+    }
+
+    .logo-link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .logo-image {
+        height: 40px;  /* 可以根據需要調整大小 */
+        width: auto;
+        object-fit: contain;
     }
 </style>

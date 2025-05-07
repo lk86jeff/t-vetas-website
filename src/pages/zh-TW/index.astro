@@ -17,6 +17,27 @@ import FormattedDate from '../../components/FormattedDate.astro';
     <body>
         <Header />
         <main>
+            <div class="slideshow-container">
+                <div class="slides fade">
+                    <img src="/slides/slide1.jpg" alt="公司環境展示" />
+                </div>
+                <div class="slides fade">
+                    <img src="/slides/slide2.jpg" alt="專案實績展示" />
+                </div>
+                <div class="slides fade">
+                    <img src="/slides/slide3.jpg" alt="團隊合作展示" />
+                </div>
+                
+                <button class="prev" onclick="changeSlide(-1)">❮</button>
+                <button class="next" onclick="changeSlide(1)">❯</button>
+                
+                <div class="dots">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+
             <div class="hero-section">
                 <div class="logo-container">
                     <img src="/logo.jpg" alt="T-Vetas Network Logo" />
@@ -83,6 +104,45 @@ import FormattedDate from '../../components/FormattedDate.astro';
             </section>
         </main>
         <Footer />
+        
+        <script>
+            // 等待 DOM 完全載入後再執行
+            document.addEventListener('DOMContentLoaded', () => {
+                let slideIndex = 1;
+                const slides = document.getElementsByClassName("slides");
+                const dots = document.getElementsByClassName("dot");
+
+                // 顯示初始幻燈片
+                showSlides(slideIndex);
+
+                // 將函數綁定到 window 對象，使其可以從 HTML 中調用
+                window.changeSlide = function(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                window.currentSlide = function(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    if (n > slides.length) {slideIndex = 1}
+                    if (n < 1) {slideIndex = slides.length}
+
+                    for (let i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+
+                    slides[slideIndex-1].style.display = "block";
+                    dots[slideIndex-1].className += " active";
+                }
+
+                // 自動輪播
+                setInterval(() => {
+                    window.changeSlide(1);
+                }, 5000);
+            });
+        </script>
     </body>
 </html>
 
@@ -233,6 +293,82 @@ import FormattedDate from '../../components/FormattedDate.astro';
         margin: 0 auto;
     }
 
+    .slideshow-container {
+        position: relative;
+        max-width: 1800px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .slides {
+        display: none;
+    }
+
+    .slides img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+    }
+
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 24px;
+        background: rgba(0,0,0,0.3);
+        border: none;
+        border-radius: 50%;
+        transition: 0.3s ease;
+    }
+
+    .next {
+        right: 20px;
+    }
+
+    .prev {
+        left: 20px;
+    }
+
+    .prev:hover, .next:hover {
+        background: rgba(0,0,0,0.8);
+    }
+
+    .dots {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .dot {
+        cursor: pointer;
+        height: 12px;
+        width: 12px;
+        margin: 0 4px;
+        background-color: rgba(255,255,255,0.5);
+        border-radius: 50%;
+        display: inline-block;
+        transition: 0.3s ease;
+    }
+
+    .active, .dot:hover {
+        background-color: white;
+    }
+
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+
     @media (max-width: 768px) {
         .hero-section {
             flex-direction: column;
@@ -272,6 +408,15 @@ import FormattedDate from '../../components/FormattedDate.astro';
 
         .clients-grid {
             grid-template-columns: repeat(2, 1fr);
+        }
+
+        .slides img {
+            height: 300px;
+        }
+
+        .prev, .next {
+            padding: 12px;
+            font-size: 18px;
         }
     }
 </style>
