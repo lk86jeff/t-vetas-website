@@ -46,14 +46,14 @@ import Layout from '../../layouts/Layout.astro';
 
         <section class="partners-section">
             <h2>設備與服務合作夥伴</h2>
-            <div class="logo-grid">
-                <div class="logo-card">
-                    <img src="/partners/ciena.png" alt="Ciena" />
-                    <p>Ciena</p>
+            <div class="partner-list">
+                <div class="partner-item">
+                    <h3>Ciena</h3>
+                    <p>專業網路設備供應商</p>
                 </div>
-                <div class="logo-card">
-                    <img src="/partners/infinera.png" alt="Infinera" />
-                    <p>Infinera</p>
+                <div class="partner-item">
+                    <h3>Infinera</h3>
+                    <p>光傳輸解決方案提供者</p>
                 </div>
                 <div class="logo-card">
                     <img src="/partners/hwacom.png" alt="Hwa Com" />
@@ -148,6 +148,37 @@ import Layout from '../../layouts/Layout.astro';
 
 .clients-list li:last-child {
     border-bottom: none;
+}
+
+.partner-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    align-items: start;
+}
+
+.partner-item {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.partner-item:hover {
+    transform: translateY(-5px);
+}
+
+.partner-item h3 {
+    color: #1A2A47;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.partner-item p {
+    color: #4a5568;
+    font-size: 1.1rem;
 }
 
 @media (max-width: 640px) {

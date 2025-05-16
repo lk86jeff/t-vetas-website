@@ -19,13 +19,16 @@ import FormattedDate from '../../components/FormattedDate.astro';
         <main>
             <div class="slideshow-container">
                 <div class="slides fade">
-                    <img src="/slides/slide1.jpg" alt="公司環境展示" />
+                    <img src="/slides/slide1.jpg" />
                 </div>
                 <div class="slides fade">
-                    <img src="/slides/slide2.jpg" alt="專案實績展示" />
+                    <img src="/slides/slide2.jpg" />
                 </div>
                 <div class="slides fade">
-                    <img src="/slides/slide3.jpg" alt="團隊合作展示" />
+                    <img src="/slides/slide3.jpg" />
+                </div>
+                <div class="slides fade">
+                    <img src="/slides/slide4.jpg" />
                 </div>
                 
                 <button class="prev" onclick="changeSlide(-1)">❮</button>
@@ -35,6 +38,7 @@ import FormattedDate from '../../components/FormattedDate.astro';
                     <span class="dot" onclick="currentSlide(1)"></span>
                     <span class="dot" onclick="currentSlide(2)"></span>
                     <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
                 </div>
             </div>
 

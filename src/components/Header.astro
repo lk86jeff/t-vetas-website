@@ -3,10 +3,10 @@ import HeaderLink from './HeaderLink.astro';
 import LanguageSelector from './LanguageSelector.astro';
 import { SITE_TITLE, navItems } from '../consts';
 
-// 從 URL 獲取當前語言
 const currentPath = Astro.url.pathname;
 const lang = currentPath.split('/')[1] || 'zh-TW';
 const nav = navItems[lang];
+let menuOpen = false;
 ---
 
 <header>
@@ -16,6 +16,9 @@ const nav = navItems[lang];
                 <img src="/logo_ball.jpg" alt="T-Vetas Network Logo" class="logo-image" />
             </a>
         </h2>
+        <button class="menu-toggle" onclick="document.body.classList.toggle('nav-open')">
+            <span></span><span></span><span></span>
+        </button>
         <div class="internal-links">
             <HeaderLink href={`/${lang}`}>{nav.home}</HeaderLink>
             <HeaderLink href={`/${lang}/services`}>{nav.services}</HeaderLink>
@@ -23,7 +26,7 @@ const nav = navItems[lang];
             <HeaderLink href={`/${lang}/about`}>{nav.about}</HeaderLink>
             <HeaderLink href={`/${lang}/partners`}>{nav.partners}</HeaderLink>
         </div>
-        <LanguageSelector />
+        <LanguageSelector currentLang={lang} />
     </nav>
 </header>
 
@@ -79,5 +82,60 @@ const nav = navItems[lang];
         height: 40px;  /* 可以根據需要調整大小 */
         width: auto;
         object-fit: contain;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            margin-left: 1rem;
+            padding: 0;
+        }
+    }
+    .menu-toggle span {
+        display: block;
+        height: 4px;
+        width: 28px;
+        background: #1A2A47;
+        margin: 5px 0;
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+    .internal-links {
+        display: flex;
+        gap: 1rem;
+        position: static;
+        flex-direction: row;
+        align-items: center;
+        background: none;
+        box-shadow: none;
+    }
+
+    @media (max-width: 900px) {
+        .internal-links {
+            display: none;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            right: 0;
+            background: #fff;
+            flex-direction: column;
+            align-items: center;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            gap: 0;
+        }
+        body.nav-open .internal-links {
+            display: flex;
+        }
     }
 </style>

@@ -1,20 +1,16 @@
 ---
 import { languages } from '../consts';
-
+const { currentLang } = Astro.props;
 const { pathname } = Astro.url;
-const currentPath = pathname.split('/');
-const currentLang = currentPath[1] || 'zh-TW';
-
-// 取得實際的頁面路徑
-const pagePath = currentPath.slice(2).join('/');
-console.log('Current Lang:', currentLang, 'Page Path:', pagePath); // 用於除錯
+const pathParts = pathname.split('/');
+const pagePath = pathParts.slice(2).join('/');
 ---
 
 <div class="language-selector">
     {Object.entries(languages).map(([lang, label]) => (
         <a 
             href={`/${lang}/${pagePath}`}
-            class={`lang-link ${currentLang === lang ? 'active' : ''}`}
+            class={`lang-link${currentLang === lang ? ' active' : ''}`}
         >
             {label}
         </a>
@@ -22,26 +18,24 @@ console.log('Current Lang:', currentLang, 'Page Path:', pagePath); // 用於除�
 </div>
 
 <style>
-    .language-selector {
-        display: flex;
-        gap: 1rem;
-        align-items: center;
-    }
-
-    .lang-link {
-        color: #4a5568;
-        text-decoration: none;
-        padding: 0.25rem 0.5rem;
-        border-radius: 4px;
-        font-size: 0.875rem;
-    }
-
-    .lang-link:hover {
-        background-color: #f7fafc;
-    }
-
-    .lang-link.active {
-        color: #FF7A00;
-        font-weight: 500;
-    }
+.language-selector {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: 1rem;
+}
+.lang-link {
+    color: #4a5568;
+    padding: 0.2em 0.7em;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.lang-link.active {
+    background: #44B3FF;
+    color: #fff;
+    font-weight: bold;
+}
+.lang-link:hover {
+    background: #44B3FF;
+}
 </style>
