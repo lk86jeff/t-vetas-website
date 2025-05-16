@@ -1,71 +1,79 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-
-const lang = 'en';
 ---
 
 <Layout
-    title="Services"
-    description="Professional Data Center & Enterprise Infrastructure Solutions"
-    lang={lang}
+    title="服務項目"
+    description="專業的數據中心與企業機房解決方案"
+    lang="zh-TW"
 >
     <section class="services-container">
-        <h2 class="section-title">要換英文......我們的核心業務範圍</h2>
+        <h2 class="section-title">Services</h2>
         <p class="section-description">
             T-Vetas Network 以高品質、適用且具成本效益的工程服務和最佳解決方案聞名，豐富的專案經驗讓我們在業界處於領先地位。
         </p>
 
         <div class="services-grid">
             <article class="service-card">
-                <h3>數據中心與企業機房</h3>
+                <h3>工程施工</h3>
+                <p class="card-description">為客戶提供電信機房/資料中心所需的設計/安裝等電信服務</p>
                 <ul>
-                    <li>IT 佈線槽道與專用光纖管道系統</li>
-                    <li>共用機房隔間與機櫃隔間</li>
-                    <li>高架地板系統設計與安裝</li>
-                    <li>機櫃、機架與配線架規劃與配置</li>
+                    <li>EHS (環境、健康與安全管理)</li>
+                    <li>BIM/CAD 工程設計與建模</li>
+                    <li>數據中心建置</li>
+                    <li>電力系統規劃與施工</li>
+                    <li>結構化佈線系統施工</li>
                 </ul>
             </article>
 
             <article class="service-card">
-                <h3>電力系統</h3>
+                <h3>物料供應</h3>
+                <p class="card-description">為客戶提供所需的施工物料，合作夥伴包含：</p>
                 <ul>
-                    <li>AC 與 DC 電源設計、供應與安裝</li>
-                    <li>整流器（Rectifier）、UPS、ATS、STS 配置</li>
-                    <li>備用電池系統規劃與佈署</li>
-                    <li>電力系統測試與現場調試</li>
+                    <li>CORNING (康寧)</li>
+                    <li>Ciena</li>
+                    <li>Infinera</li>
+                    <li>Schneider (施耐德), APC</li>
+                    <li>Panduit</li>
+                    <li>AFL</li>
+                    <li>JPC</li>
+                    <li>Dell</li>
                 </ul>
             </article>
 
             <article class="service-card">
-                <h3>結構化佈線</h3>
+                <h3>證書</h3>
+                <p class="card-description">證書是展現一個公司安裝/測試人員的品質的方法, 我們公司擁有許多跨國公司的認證</p>
                 <ul>
-                    <li>Cat5e / Cat6 / Cat6a 銅纜佈線系統</li>
-                    <li>單模 OS1 & OS2、多模 OM1/OM2/OM3/OM4 光纖佈線</li>
-                    <li>現場測試、認證與調試服務</li>
+                    <li>CORNING (康寧)</li>
+                    <li>Ciena</li>
+                    <li>Infinera</li>
+                    <li>Panduit</li>
                 </ul>
             </article>
 
             <article class="service-card">
                 <h3>網路解決方案</h3>
+                <p class="card-description">我們針對客戶的需求提供不同的網路解決方案</p>
                 <ul>
-                    <li>資料/語音網路設計、實施、調試與整合</li>
-                    <li>光傳輸專業：SDH / WDM / IP / GPON 解決方案</li>
-                    <li>Cisco、Huawei、Infinera、Ciena 等品牌設備整合</li>
+                    <li>IP network</li>
+                    <li>SDH/WDM network</li>
+                    <li>Wifi network</li>
                 </ul>
             </article>
 
-            <article class="service-card full-width">
-                <h3>設備安裝與調試</h3>
-                <p class="highlight-text">
-                    我們在 <strong>Infinera 設備</strong>（超過 100 個專案經驗）及 <strong>Ciena 設備</strong>（超過 50 個專案經驗）上的現場調試尤為專精，並提供：
-                </p>
+            <article class="service-card">
+                <h3>維護</h3>
+                <p class="card-description">我們為許多企業提供智慧手服務，確保客戶的服務全年365天正常運作</p>
                 <ul>
-                    <li>路由器／交換機設備安裝與配置</li>
-                    <li>線槽與光纖導槽現場佈署</li>
-                    <li>機架、CommScope's OMX 機櫃與 ODF 安裝</li>
-                    <li>客製化底座與支架工程</li>
+                    <li>XXXX Smarthand</li>
+                    <li>XXXXXXXXX smarthand</li>
+                    <li>XXXXXX smarthand</li>
+                    <li>XXXXXXX Smarthand</li>
+                    <li>XXXX smarthand</li>
                 </ul>
             </article>
+
         </div>
     </section>
 </Layout>
@@ -131,6 +139,13 @@ const lang = 'en';
     color: #4a5568;
     margin-bottom: 1rem;
     line-height: 1.6;
+}
+
+.card-description {
+    color: #4a5568;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    font-size: 0.95rem;
 }
 
 @media (max-width: 768px) {
