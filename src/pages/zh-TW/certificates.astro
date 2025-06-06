@@ -1,0 +1,211 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+    title="認證證書"
+    description="T-Vetas Network 的專業認證與合作夥伴證書"
+    lang="zh-TW"
+>
+    <!-- 燈箱背景 -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="放大檢視" />
+        <span class="close-btn">&times;</span>
+    </div>
+
+    <div class="certificates-container">
+        <h1>專業認證證書</h1>
+        
+        <section id="corning" class="cert-section">
+            <h2>CORNING (康寧) 認證</h2>
+            <div class="warranty-note">
+                <strong>✓ T-Vetas Network 可為全康寧佈線專案提供 25 年系統保固</strong>
+            </div>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <img 
+                        src="/certificates/CORNING_certificate.jpg" 
+                        alt="CORNING 認證證書" 
+                        class="cert-img"
+                    />
+                    <p>CORNING NPI認證</p>
+                </div>
+                <!-- 可以加入更多康寧相關證書 -->
+            </div>
+        </section>
+
+        <section id="ciena" class="cert-section">
+            <h2>Ciena 認證</h2>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <img 
+                        src="/certificates/Ciena_certificate.jpg" 
+                        alt="Ciena 認證證書"
+                        class="cert-img"
+                    />
+                    <p>Ciena 6500 Applications and Common Hardware 認證</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="panduit" class="cert-section">
+            <h2>Panduit 認證</h2>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <img 
+                        src="/certificates/Panduit_certificate.jpg" 
+                        alt="Panduit 認證證書"
+                        class="cert-img"
+                    />
+                    <p>Panduit Enterprise 結構化佈線系統認證</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</Layout>
+
+<script is:inline>
+    function openLightbox(imgSrc) {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        lightbox.style.display = 'flex';
+        lightboxImg.src = imgSrc;
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    // 改用事件委派
+    document.addEventListener('DOMContentLoaded', function() {
+        // 點擊圖片開啟燈箱
+        document.querySelectorAll('.cert-img').forEach(img => {
+            img.addEventListener('click', function() {
+                openLightbox(this.src);
+            });
+        });
+
+        // 點擊關閉按鈕或背景關閉燈箱
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target.id === 'lightbox' || e.target.classList.contains('close-btn')) {
+                closeLightbox();
+            }
+        });
+
+        // ESC 鍵關閉燈箱
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    });
+</script>
+
+<style>
+.certificates-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.cert-section {
+    margin: 3rem 0;
+}
+
+.cert-section h2 {
+    color: #1A2A47;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.cert-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+}
+
+.cert-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.cert-card p {
+    margin-top: 1rem;
+    text-align: center;
+    color: #4a5568;
+}
+
+.cert-img {
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.cert-img:hover {
+    opacity: 0.9;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+    margin: auto;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.close-btn:hover {
+    color: #ccc;
+}
+
+.warranty-note {
+    background: #f0f9ff;
+    border-left: 4px solid #44B3FF;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+    color: #1A2A47;
+}
+
+@media (max-width: 768px) {
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>

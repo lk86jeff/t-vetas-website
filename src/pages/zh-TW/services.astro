@@ -47,10 +47,11 @@ import Layout from '../../layouts/Layout.astro';
                 <h3>證書</h3>
                 <p class="card-description">證書是展現一個公司安裝/測試人員的品質的方法, 我們公司擁有許多跨國公司的認證</p>
                 <ul>
-                    <li>CORNING (康寧)</li>
-                    <li>Ciena</li>
+                    <li><a href="/zh-TW/certificates#corning" class="vendor-link">CORNING (康寧)</a></li>
+                    <li><a href="/zh-TW/certificates#ciena" class="vendor-link">Ciena</a></li>
                     <li>Infinera</li>
-                    <li>Panduit</li>
+                    <li>Schneider (施耐德), APC</li>
+                    <li><a href="/zh-TW/certificates#panduit" class="vendor-link">Panduit</a></li>
                 </ul>
             </article>
 
@@ -148,6 +149,17 @@ import Layout from '../../layouts/Layout.astro';
     margin-bottom: 1rem;
     line-height: 1.6;
     font-size: 0.95rem;
+}
+
+.vendor-link {
+    color: #44B3FF;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.vendor-link:hover {
+    color: #FF7A00;
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
