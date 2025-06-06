@@ -1,0 +1,238 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+    title="BIM/CAD 工程設計與建模"
+    description="T-Vetas Network 專注於數據中心電信系統的 2D/3D 建模與協同設計"
+    lang="zh-TW"
+>
+    <div class="bim-container">
+        <section class="intro-section">
+            <h1 class="page-title">BIM/CAD 工程設計與建模</h1>
+            <p class="intro-text">
+                我們運用先進的 BIM (Building Information Modeling) 與 CAD 技術，為客戶提供精確的電信系統設計與建模服務，確保專案順利執行。
+            </p>
+        </section>
+
+        <section class="features-section">
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h2>CAD 設計服務</h2>
+                    <ul>
+                        <li>2D 施工圖設計</li>
+                        <li>3D 建模與視覺化</li>
+                        <li>精確的材料清單</li>
+                        <li>設計變更追蹤</li>
+                        <li>版本管理與文件控制</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h2>BIM 整合優勢</h2>
+                    <ul>
+                        <li>衝突檢測 (Clash Detection)</li>
+                        <li>跨團隊協同作業</li>
+                        <li>施工進度模擬</li>
+                        <li>As-built 模型建置</li>
+                        <li>資訊化設施管理</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h2>應用領域</h2>
+                    <ul>
+                        <li>數據中心佈線系統</li>
+                        <li>通訊機房設備配置</li>
+                        <li>線纜路徑規劃</li>
+                        <li>機電管線整合</li>
+                        <li>空間配置最佳化</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="workflow-section">
+            <h2 class="section-title">工作流程</h2>
+            <div class="workflow-steps">
+                <div class="step">
+                    <span class="step-number">01</span>
+                    <h3>需求分析</h3>
+                    <p>深入了解專案需求，確定建模範圍與細節程度</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">02</span>
+                    <h3>初步設計</h3>
+                    <p>基於需求進行概念設計與系統規劃</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">03</span>
+                    <h3>細部建模</h3>
+                    <p>執行詳細的 3D 建模與衝突檢測</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">04</span>
+                    <h3>協同整合</h3>
+                    <p>與各系統進行整合與優化</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>需要專業的 BIM/CAD 服務？</h2>
+                <p>我們的團隊擁有豐富的電信系統建模經驗，歡迎與我們討論您的專案需求。</p>
+                <a href="/zh-TW/about#contact" class="cta-button">聯絡我們</a>
+            </div>
+        </section>
+    </div>
+</Layout>
+
+<style>
+.bim-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.intro-section {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.page-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #1A2A47;
+    margin-bottom: 1rem;
+}
+
+.intro-text {
+    color: #4a5568;
+    font-size: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.feature-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.feature-card h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2D3748;
+    margin-bottom: 1rem;
+}
+
+.feature-card ul {
+    list-style-type: disc;
+    padding-left: 1.25rem;
+    color: #4a5568;
+    font-size: 0.9rem;
+}
+
+.feature-card li {
+    margin-bottom: 0.5rem;
+}
+
+.workflow-section {
+    margin: 4rem 0;
+}
+
+.section-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.workflow-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.step {
+    text-align: center;
+}
+
+.step-number {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    background: #44B3FF;
+    color: white;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.step h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.step p {
+    font-size: 0.9rem;
+    color: #4a5568;
+}
+
+.cta-section {
+    background: #f7fafc;
+    padding: 3rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.cta-content h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    font-size: 0.9rem;
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #44B3FF;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.cta-button:hover {
+    background: #3182CE;
+}
+
+@media (max-width: 768px) {
+    .bim-container {
+        padding: 1rem;
+    }
+
+    .workflow-steps {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
