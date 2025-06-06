@@ -19,7 +19,7 @@ import Layout from '../../layouts/Layout.astro';
                 <p class="card-description">為客戶提供電信機房/資料中心所需的設計/安裝等電信服務</p>
                 <ul>
                     <li>
-                        <a href="/zh-TW/ehs" class="ehs-link">EHS (環境、健康與安全管理)</a>
+                        <a href="/zh-TW/ehs" class="vendor-link">EHS (環境、健康與安全管理)</a>
                     </li>
                     <li>BIM/CAD 工程設計與建模</li>
                     <li>數據中心建置</li>
@@ -50,7 +50,6 @@ import Layout from '../../layouts/Layout.astro';
                     <li><a href="/zh-TW/certificates#corning" class="vendor-link">CORNING (康寧)</a></li>
                     <li><a href="/zh-TW/certificates#ciena" class="vendor-link">Ciena</a></li>
                     <li>Infinera</li>
-                    <li>Schneider (施耐德), APC</li>
                     <li><a href="/zh-TW/certificates#panduit" class="vendor-link">Panduit</a></li>
                 </ul>
             </article>
@@ -67,13 +66,16 @@ import Layout from '../../layouts/Layout.astro';
 
             <article class="service-card">
                 <h3>維護</h3>
-                <p class="card-description">我們為許多企業提供智慧手服務，確保客戶的服務全年365天正常運作</p>
+                <p class="card-description">我們為企業客戶提供全方位的維護服務，確保設備與系統全年無休正常運作</p>
                 <ul>
-                    <li>XXXX Smarthand</li>
-                    <li>XXXXXXXXX smarthand</li>
-                    <li>XXXXXX smarthand</li>
-                    <li>XXXXXXX Smarthand</li>
-                    <li>XXXX smarthand</li>
+                    <li>RMA 故障設備更換服務</li>
+                    <li>5x8 基本維護支援</li>
+                    <li>7x24 全天候緊急支援</li>
+                    <li>結構化佈線系統維護</li>
+                    <li>定期巡檢與預防性維護</li>
+                    <li>遠端技術支援與諮詢</li>
+                    <li>現場故障排除服務</li>
+                    <li>系統效能監控與優化</li>
                 </ul>
             </article>
 
@@ -112,16 +114,66 @@ import Layout from '../../layouts/Layout.astro';
 
 .service-card {
     background: white;
-    padding: 1.5rem;
+    padding: 1.8rem;
     border-radius: 0.5rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 工程施工卡片 - 藍色主題 */
+.service-card:nth-child(1) {
+    border-top: 4px solid #44B3FF;
+    background: linear-gradient(to bottom right, #ffffff, #f0f9ff);
+}
+
+/* 物料供應卡片 - 綠色主題 */
+.service-card:nth-child(2) {
+    border-top: 4px solid #48BB78;
+    background: linear-gradient(to bottom right, #ffffff, #f0fff4);
+}
+
+/* 證書卡片 - 金色主題 */
+.service-card:nth-child(3) {
+    border-top: 4px solid #ECC94B;
+    background: linear-gradient(to bottom right, #ffffff, #fffff0);
+}
+
+/* 網路解決方案卡片 - 紫色主題 */
+.service-card:nth-child(4) {
+    border-top: 4px solid #9F7AEA;
+    background: linear-gradient(to bottom right, #ffffff, #faf5ff);
+}
+
+/* 維護卡片 - 橘色主題 */
+.service-card:nth-child(5) {
+    border-top: 4px solid #ED8936;
+    background: linear-gradient(to bottom right, #ffffff, #fffaf0);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.15);
 }
 
 .service-card h3 {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #1A2A47;
     margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.service-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: currentColor;
+    opacity: 0.3;
 }
 
 .service-card ul {

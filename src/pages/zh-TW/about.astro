@@ -50,10 +50,22 @@ import Layout from '../../layouts/Layout.astro';
         </section>
 
         <section class="branch-info">
-            <h2>台北分公司</h2>
-            <p>
-                台北分公司專責 <strong>設計、安裝與調試</strong> 服務，快速響應台灣及周邊區域的客戶需求，並協同總部資源，為每一個專案提供完整技術支援與後續維運。
-            </p>
+            <h2>營運據點</h2>
+            <div class="branch-grid">
+                <div class="branch-card">
+                    <h3>台北分公司</h3>
+                    <p>
+                        台北分公司專責 <strong>設計、安裝與調試</strong> 服務，快速響應台灣及周邊區域的客戶需求，並協同總部資源，為每一個專案提供完整技術支援與後續維運。
+                    </p>
+                </div>
+                
+                <div class="branch-card">
+                    <h3>桃園分公司</h3>
+                    <p>
+                        桃園分公司主要負責 <strong>大型資料中心網路建置與維運專案</strong>，擁有豐富的大規模企業網路架構實務經驗，可提供完整的網路規劃、建置到維運服務。
+                    </p>
+                </div>
+            </div>
         </section>
 
         <section id="contact" class="contact-info">
@@ -169,6 +181,8 @@ strong {
 .contact-card h3 {
     color: #1A2A47;
     margin-bottom: 1rem;
+    font-size: 1.5rem;  /* 將原本預設的大小調小 */
+    font-weight: 600;   /* 適當調整粗細度 */
 }
 
 .contact-card p {
@@ -217,6 +231,32 @@ strong {
     max-width: 800px;
     margin: 0 auto 3rem;
     line-height: 1.6;
+}
+
+.branch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.branch-card {
+    padding: 2rem;
+    background: #f5f7fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.branch-card h3 {
+    color: #1A2A47;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;  /* 將原本預設的大小調小 */
+    font-weight: 600;   /* 適當調整粗細度 */
+}
+
+.branch-card p {
+    margin-bottom: 0;
+    line-height: 1.7;
 }
 
 @media (max-width: 768px) {
