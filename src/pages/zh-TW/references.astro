@@ -1,119 +1,79 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import referencesData from '../../data/references.json';
+
+const { years } = referencesData;
+const yearList = Object.keys(years).sort((a, b) => b - a);
+
+function groupByCategory(projects) {
+    return projects.reduce((acc, project) => {
+        const category = project.category['zh-TW'];
+        if (!acc[category]) {
+            acc[category] = [];
+        }
+        acc[category].push(project);
+        return acc;
+    }, {});
+}
+
+// 定義類別顏色映射
+const categoryColors = {
+    "大型數據中心專案": {
+        border: "#44B3FF",
+        background: "#f0f9ff"
+    },
+    "光傳輸設備專案": {
+        border: "#48BB78",
+        background: "#f0fff4"
+    },
+    "CLS海纜登陸站基礎建設": {
+        border: "#ED8936",
+        background: "#fffaf0"
+    },
+    "現場支援與維護": {
+        border: "#9F7AEA",
+        background: "#faf5ff"
+    },
+    "電信／企業網路升級與其他": {
+        border: "#ECC94B",
+        background: "#fffff0"
+    }
+};
+
 ---
 
-<Layout
-    title="參考案例"
-    description="我們在電信與數據中心基礎建設領域的成功案例"
-    lang="zh-TW"
->
+<Layout title="實績案例" description="T-Vetas Network 的專案實績與參考案例" lang="zh-TW">
     <div class="references-container">
-        <h1 class="main-title">歷年重要專案實績</h1>
-
-        <section class="reference-section">
-            <h2>2024 進行中專案</h2>
-            <div class="projects-grid">
-                <article class="project-card">
-                    <h3>國際電信傳輸專案</h3>
-                    <ul class="project-details">
-                        <li>支援超過 30 個 Infinera 專案測試 (台灣及亞洲地區)</li>
-                        <li>支援超過 15 個 Ciena 專案測試 (香港及台灣)</li>
-                    </ul>
-                </article>
-                <article class="project-card">
-                    <h3>大型數據中心專案</h3>
-                    <ul class="project-details">
-                        <li>XXXX Smarthands支援服務</li>
-                        <li>XXXX 網路纜線佈放工程</li>
-                        <li>XXXXXXXXX數據中心電信建置工程</li>
-                        <li>XXXXXXXXX網路設備光纖佈放工程</li>
-                        <li>AXX 網路設備光纖佈放工程</li>
-                    </ul>
-                </article>
-                <article class="project-card">
-                    <h3>基礎設施更新專案</h3>
-                    <ul class="project-details">
-                        <li>Telstra CCTV 更換工程</li>
-                    </ul>
-                </article>
-            </div>
-        </section>
-
-        <section class="reference-section">
-            <h2>2023 年度專案</h2>
-            <div class="projects-grid">
-                <article class="project-card">
-                    <h3>國際傳輸網路建設</h3>
-                    <ul class="project-details">
-                        <li>支援超過 20 個 Infinera 專案測試 (台灣及亞洲地區)</li>
-                        <li>支援超過 10 個 Ciena 專案測試 (香港地區)</li>
-                    </ul>
-                </article>
-                <article class="project-card">
-                    <h3>企業客戶服務</h3>
-                    <ul class="project-details">
-                        <li>XXXX Smarthands支援服務</li>
-                        <li>XXXXXXXXX數據中心電信建置工程</li>
-                    </ul>
-                </article>
-            </div>
-        </section>
-
-        <section class="reference-section">
-            <h2>2022 年度專案</h2>
-            <div class="projects-grid">
-                <article class="project-card">
-                    <h3>設備測試與支援</h3>
-                    <ul class="project-details">
-                        <li>支援超過 22 個 Infinera 專案測試 (台灣及亞洲地區)</li>
-                        <li>支援超過 15 個 Ciena 專案測試 (香港地區)</li>
-                        <li>XXXX Smarthands支援服務</li>
-                    </ul>
-                </article>
-                <article class="project-card">
-                    <h3>網路升級專案</h3>
-                    <ul class="project-details">
-                        <li>全國有線電視 IP 骨幹網路整改</li>
-                    </ul>
-                </article>
-            </div>
-        </section>
-
-        <section class="reference-section">
-            <h2>2017-2021 重點專案</h2>
-            <div class="projects-grid">
-                <article class="project-card">
-                    <h3>國際客戶合作專案</h3>
-                    <ul class="project-details">
-                        <li>XXXX Smarthands支援服務 (2017-2021)</li>
-                        <li>XXXX 亞太區網路設備建置與擴充</li>
-                        <li>Telstra 亞洲區傳輸設備安裝與測試</li>
-                    </ul>
-                </article>
-                <article class="project-card">
-                    <h3>設備建置與擴充</h3>
-                    <ul class="project-details">
-                        <li>Infinera DTNX/XT/MTC 設備建置與擴充</li>
-                        <li>Ciena 6500/Waveserver 設備建置案</li>
-                        <li>XXXX 歐洲 SDH/WDM 設備建置案</li>
-                    </ul>
-                </article>
-            </div>
-        </section>
-
-        <section class="reference-section">
-            <h2>2016 創始年度專案</h2>
-            <div class="projects-grid">
-                <article class="project-card">
-                    <h3>首年重點專案</h3>
-                    <ul class="project-details">
-                        <li>ECCOM 杜拜 IDC 網路建置</li>
-                        <li>Infinera 香港、台灣 DTNX 設備擴充</li>
-                        <li>XXXX Smarthands支援服務</li>
-                    </ul>
-                </article>
-            </div>
-        </section>
+        <h1 class="page-title">實績案例</h1>
+        
+        {yearList.map(year => {
+            const groupedProjects = groupByCategory(years[year]);
+            return (
+                <section class="year-section">
+                    <h2 class="year-title">{year}</h2>
+                    <div class="references-grid">
+                        {Object.entries(groupedProjects).map(([category, projects]) => (
+                            <article 
+                                class="reference-card" 
+                                style={`
+                                    border-top: 4px solid ${categoryColors[category].border};
+                                    background: linear-gradient(to bottom right, white, ${categoryColors[category].background})
+                                `}
+                            >
+                                <h3 class="category-title">{category}</h3>
+                                <ul class="project-list">
+                                    {projects.map((project) => (
+                                        <li class="project-item">
+                                            {project.customer} {project.title['zh-TW']}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </article>
+                        ))}
+                    </div>
+                </section>
+            );
+        })}
     </div>
 </Layout>
 
@@ -124,86 +84,80 @@ import Layout from '../../layouts/Layout.astro';
     padding: 2rem;
 }
 
-.main-title {
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    color: #1A2A47;
-    margin-bottom: 3rem;
-}
-
-.reference-section {
-    margin-bottom: 4rem;
-}
-
-.reference-section h2 {
-    font-size: 1.5rem;
+.page-title {
+    font-size: 1.75rem;
     font-weight: 600;
     color: #1A2A47;
     margin-bottom: 2rem;
+    text-align: center;
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+.year-section {
+    margin-bottom: 5rem;  /* 從 3rem 增加到 5rem */
 }
 
-.project-card {
-    background: white;
-    border-radius: 8px;
-    padding: 2rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.project-card h3 {
-    color: #1A2A47;
+.year-title {
     font-size: 1.25rem;
     font-weight: 600;
-    margin-bottom: 1rem;
+    color: #2D3748;
+    margin: 3rem 0 2rem;  /* 上方增加間距 */
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #EDF2F7;
 }
 
-.project-details {
-    list-style-type: none;
-    padding-left: 0;
-    margin-top: 1rem;
+/* 第一個年份標題不需要上方間距 */
+.year-section:first-child .year-title {
+    margin-top: 0;
 }
 
-.project-details li {
+.references-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+.reference-card {
+    padding: 1.8rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
     position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 0.75rem;
-    line-height: 1.5;
-    color: #4a5568;
+    overflow: hidden;
 }
 
-.project-details li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #FF7A00;
+.reference-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.15);
+}
+
+.category-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2D3748;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #EDF2F7;
+}
+
+.project-list {
+    list-style-type: disc;
+    padding-left: 1.25rem;
+}
+
+.project-item {
+    color: #4A5568;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding: 0.5rem 0;
 }
 
 @media (max-width: 768px) {
     .references-container {
         padding: 1rem;
     }
-
-    .main-title {
-        font-size: 1.75rem;
-        margin-bottom: 2rem;
-    }
-
-    .reference-section h2 {
-        font-size: 1.25rem;
-    }
-
-    .projects-grid {
+    
+    .references-grid {
         grid-template-columns: 1fr;
-    }
-
-    .project-card {
-        padding: 1.5rem;
     }
 }
 </style>

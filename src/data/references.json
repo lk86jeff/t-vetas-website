@@ -1,0 +1,627 @@
+{
+  "years": {
+    "2025": [
+      {
+        "category": {
+          "en": "Hyperscale & Enterprise Data Center",
+          "zh-TW": "大型數據中心專案"
+        },
+        "title": {
+          "en": "data-center telecom cabling",
+          "zh-TW": "數據中心電信佈線"
+        },
+        "customer": "Microsoft"
+      },
+      {
+        "category": {
+          "en": "Hyperscale & Enterprise Data Center",
+          "zh-TW": "大型數據中心專案"
+        },
+        "title": {
+          "en": "office-lab network infrastructure",
+          "zh-TW": "辦公室與實驗室網路基礎建設"
+        },
+        "customer": "Microsoft"
+      },
+      {
+        "category": {
+          "en": "Optical Transmission Equipment",
+          "zh-TW": "光傳輸設備專案"
+        },
+        "title": {
+          "en": "20+ optical-transmission projects (TW & APAC)",
+          "zh-TW": "20+ 光傳輸設備專案（台灣與亞太）"
+        },
+        "customer": "Infinera"
+      },
+      {
+        "category": {
+          "en": "Optical Transmission Equipment",
+          "zh-TW": "光傳輸設備專案"
+        },
+        "title": {
+          "en": "10+ optical-transmission projects (HK & TW)",
+          "zh-TW": "10+ 光傳輸設備專案（香港與台灣）"
+        },
+        "customer": "Ciena"
+      },
+      {
+        "category": {
+          "en": "Smart Hands & Maintenance",
+          "zh-TW": "現場支援與維護"
+        },
+        "title": {
+          "en": "smart-hands support",
+          "zh-TW": "現場支援服務"
+        },
+        "customer": "Meta"
+      }
+    ],
+
+    "2024": [
+      {
+        "category": {
+          "en": "Hyperscale & Enterprise Data Center",
+          "zh-TW": "大型數據中心專案"
+        },
+        "title": {
+          "en": "data-center telecom cabling",
+          "zh-TW": "數據中心電信佈線"
+        },
+        "customer": "Microsoft"
+      },
+      {
+        "category": {
+          "en": "Hyperscale & Enterprise Data Center",
+          "zh-TW": "大型數據中心專案"
+        },
+        "title": {
+          "en": "network-equipment installation",
+          "zh-TW": "網路設備安裝"
+        },
+        "customer": "AWS"
+      },
+      {
+        "category": {
+          "en": "Optical Transmission Equipment",
+          "zh-TW": "光傳輸設備專案"
+        },
+        "title": {
+          "en": "30+ optical-transmission projects (TW & APAC)",
+          "zh-TW": "30+ 光傳輸設備專案（台灣與亞太）"
+        },
+        "customer": "Infinera"
+      },
+      {
+        "category": {
+          "en": "Optical Transmission Equipment",
+          "zh-TW": "光傳輸設備專案"
+        },
+        "title": {
+          "en": "15+ optical-transmission projects (HK & TW)",
+          "zh-TW": "15+ 光傳輸設備專案（香港與台灣）"
+        },
+        "customer": "Ciena"
+      },
+      {
+        "category": {
+          "en": "Smart Hands & Maintenance",
+          "zh-TW": "現場支援與維護"
+        },
+        "title": {
+          "en": "smart-hands support",
+          "zh-TW": "現場支援服務"
+        },
+        "customer": "Meta"
+      },
+      {
+        "category": {
+          "en": "Carrier / Enterprise Network Upgrades & Other",
+          "zh-TW": "電信／企業網路升級與其他"
+        },
+        "title": {
+          "en": "CCTV system replacement",
+          "zh-TW": "CCTV 系統汰換"
+        },
+        "customer": "Telstra"
+      }
+    ],
+
+    "2023": [
+      {
+        "category": {
+          "en": "Hyperscale & Enterprise Data Center",
+          "zh-TW": "大型數據中心專案"
+        },
+        "title": {
+          "en": "data-center telecom cabling",
+          "zh-TW": "數據中心電信佈線"
+        },
+        "customer": "Microsoft"
+      },
+      {
+        "category": {
+          "en": "Submarine Cable & CLS Infrastructure",
+          "zh-TW": "CLS海纜登陸站基礎建設"
+        },
+        "title": {
+          "en": "CLS DWDM integration & commissioning",
+          "zh-TW": "海纜登陸站 DWDM 系統整合與開通"
+        },
+        "customer": "Google"
+      },
+      {
+        "category": {
+          "en": "Optical Transmission Equipment",
+          "zh-TW": "光傳輸設備專案"
+        },
+        "title": {
+          "en": "20+ optical-transmission projects",
+          "zh-TW": "20+ 光傳輸設備專案"
+        },
+        "customer": "Infinera"
+      },
+      {
+        "category": {
+          "en": "Optical Transmission Equipment",
+          "zh-TW": "光傳輸設備專案"
+        },
+        "title": {
+          "en": "10+ optical-transmission projects",
+          "zh-TW": "10+ 光傳輸設備專案"
+        },
+        "customer": "Ciena"
+      },
+      {
+        "category": {
+          "en": "Smart Hands & Maintenance",
+          "zh-TW": "現場支援與維護"
+        },
+        "title": {
+          "en": "smart-hands support",
+          "zh-TW": "現場支援服務"
+        },
+        "customer": "Meta"
+      }
+    ],
+
+    "2022": [
+      {
+        "category": {
+          "en": "Optical Transmission Equipment",
+          "zh-TW": "光傳輸設備專案"
+        },
+        "title": {
+          "en": "22+ optical-transmission projects",
+          "zh-TW": "22+ 光傳輸設備專案"
+        },
+        "customer": "Infinera"
+      },
+      {
+        "category": {
+          "en": "Optical Transmission Equipment",
+          "zh-TW": "光傳輸設備專案"
+        },
+        "title": {
+          "en": "15+ optical-transmission projects",
+          "zh-TW": "15+ 光傳輸設備專案"
+        },
+        "customer": "Ciena"
+      },
+      {
+        "category": {
+          "en": "Smart Hands & Maintenance",
+          "zh-TW": "現場支援與維護"
+        },
+        "title": {
+          "en": "smart-hands support",
+          "zh-TW": "現場支援服務"
+        },
+        "customer": "Meta"
+      },
+      {
+        "category": {
+          "en": "Carrier / Enterprise Network Upgrades & Other",
+          "zh-TW": "電信／企業網路升級與其他"
+        },
+        "title": {
+          "en": "network-backbone replacement",
+          "zh-TW": "骨幹網路汰換"
+        },
+        "customer": "DCTV"
+      }
+    ],
+
+    "2021": [
+      {
+        "category": {
+          "en": "Submarine Cable & CLS Infrastructure",
+          "zh-TW": "CLS海纜登陸站基礎建設"
+        },
+        "title": {
+          "en": "CLS infrastructure",
+          "zh-TW": "海纜登陸站基礎建設"
+        },
+        "customer": "Meta"
+      },
+      {
+        "category": {
+          "en": "Submarine Cable & CLS Infrastructure",
+          "zh-TW": "CLS海纜登陸站基礎建設"
+        },
+        "title": {
+          "en": "CLS infrastructure",
+          "zh-TW": "海纜登陸站基礎建設"
+        },
+        "customer": "Google"
+      },
+      {
+        "category": {
+          "en": "Submarine Cable & CLS Infrastructure",
+          "zh-TW": "CLS海纜登陸站基礎建設"
+        },
+        "title": {
+          "en": "CLS infrastructure",
+          "zh-TW": "海纜登陸站基礎建設"
+        },
+        "customer": "PCCW"
+      },
+      {
+        "category": {
+          "en": "Optical Transmission Equipment",
+          "zh-TW": "光傳輸設備專案"
+        },
+        "title": {
+          "en": "25+ optical-transmission projects",
+          "zh-TW": "25+ 光傳輸設備專案"
+        },
+        "customer": "Infinera"
+      },
+      {
+        "category": {
+          "en": "Optical Transmission Equipment",
+          "zh-TW": "光傳輸設備專案"
+        },
+        "title": {
+          "en": "15+ optical-transmission projects",
+          "zh-TW": "15+ 光傳輸設備專案"
+        },
+        "customer": "Ciena"
+      },
+      {
+        "category": {
+          "en": "Smart Hands & Maintenance",
+          "zh-TW": "現場支援與維護"
+        },
+        "title": {
+          "en": "smart-hands support",
+          "zh-TW": "現場支援服務"
+        },
+        "customer": "Meta"
+      },
+      {
+        "category": {
+          "en": "Carrier / Enterprise Network Upgrades & Other",
+          "zh-TW": "電信／企業網路升級與其他"
+        },
+        "title": {
+          "en": "cabling installation",
+          "zh-TW": "佈線安裝工程"
+        },
+        "customer": "AT&T"
+      }
+    ],
+
+    "2020": [
+      {
+        "category": {
+          "en": "Submarine Cable & CLS Infrastructure",
+          "zh-TW": "CLS海纜登陸站基礎建設"
+        },
+        "title": {
+          "en": "CLS infrastructure",
+          "zh-TW": "海纜登陸站基礎建設"
+        },
+        "customer": "Meta"
+      },
+      {
+        "category": {
+          "en": "Optical Transmission Equipment",
+          "zh-TW": "光傳輸設備專案"
+        },
+        "title": {
+          "en": "30+ optical-transmission projects",
+          "zh-TW": "30+ 光傳輸設備專案"
+        },
+        "customer": "Infinera"
+      },
+      {
+        "category": {
+          "en": "Optical Transmission Equipment",
+          "zh-TW": "光傳輸設備專案"
+        },
+        "title": {
+          "en": "20+ optical-transmission projects",
+          "zh-TW": "20+ 光傳輸設備專案"
+        },
+        "customer": "Ciena"
+      },
+      {
+        "category": {
+          "en": "Smart Hands & Maintenance",
+          "zh-TW": "現場支援與維護"
+        },
+        "title": {
+          "en": "smart-hands support",
+          "zh-TW": "現場支援服務"
+        },
+        "customer": "Meta"
+      },
+      {
+        "category": {
+          "en": "Carrier / Enterprise Network Upgrades & Other",
+          "zh-TW": "電信／企業網路升級與其他"
+        },
+        "title": {
+          "en": "cable-tray installation",
+          "zh-TW": "纜線槽安裝"
+        },
+        "customer": "Telstra"
+      }
+    ],
+
+    "2019": [
+      {
+        "category": {
+          "en": "Optical Transmission Equipment",
+          "zh-TW": "光傳輸設備專案"
+        },
+        "title": {
+          "en": "6500 / Waveserver builds (HK)",
+          "zh-TW": "6500／Waveserver 系統建置（香港）"
+        },
+        "customer": "Ciena"
+      },
+      {
+        "category": {
+          "en": "Optical Transmission Equipment",
+          "zh-TW": "光傳輸設備專案"
+        },
+        "title": {
+          "en": "Asia Ciena 6500 rollout",
+          "zh-TW": "亞太 Ciena 6500 部署"
+        },
+        "customer": "Telstra"
+      },
+      {
+        "category": {
+          "en": "Optical Transmission Equipment",
+          "zh-TW": "光傳輸設備專案"
+        },
+        "title": {
+          "en": "Europe SDH/WDM deployment",
+          "zh-TW": "歐洲 SDH／WDM 部署"
+        },
+        "customer": "PCCW"
+      },
+      {
+        "category": {
+          "en": "Smart Hands & Maintenance",
+          "zh-TW": "現場支援與維護"
+        },
+        "title": {
+          "en": "smart-hands support",
+          "zh-TW": "現場支援服務"
+        },
+        "customer": "Meta"
+      }
+    ],
+
+    "2018": [
+      {
+        "category": {
+          "en": "Optical Transmission Equipment",
+          "zh-TW": "光傳輸設備專案"
+        },
+        "title": {
+          "en": "DTN-X / XT / MTC builds & expansions (TW, PH, KR)",
+          "zh-TW": "DTN-X／XT／MTC 系統建置與擴充（台、菲、韓）"
+        },
+        "customer": "Infinera"
+      },
+      {
+        "category": {
+          "en": "Optical Transmission Equipment",
+          "zh-TW": "光傳輸設備專案"
+        },
+        "title": {
+          "en": "6500 & Waveserver builds",
+          "zh-TW": "6500 與 Waveserver 系統建置"
+        },
+        "customer": "Ciena"
+      },
+      {
+        "category": {
+          "en": "Optical Transmission Equipment",
+          "zh-TW": "光傳輸設備專案"
+        },
+        "title": {
+          "en": "Asia transmission deployments",
+          "zh-TW": "亞太光纖傳輸部署"
+        },
+        "customer": "Telstra"
+      },
+      {
+        "category": {
+          "en": "Optical Transmission Equipment",
+          "zh-TW": "光傳輸設備專案"
+        },
+        "title": {
+          "en": "APAC network-equipment deployment",
+          "zh-TW": "亞太網路設備部署"
+        },
+        "customer": "AT&T"
+      },
+      {
+        "category": {
+          "en": "Optical Transmission Equipment",
+          "zh-TW": "光傳輸設備專案"
+        },
+        "title": {
+          "en": "EU & HK Huawei expansions",
+          "zh-TW": "歐洲與香港華為設備擴充"
+        },
+        "customer": "PCCW"
+      },
+      {
+        "category": {
+          "en": "Smart Hands & Maintenance",
+          "zh-TW": "現場支援與維護"
+        },
+        "title": {
+          "en": "smart-hands support",
+          "zh-TW": "現場支援服務"
+        },
+        "customer": "Meta"
+      }
+    ],
+
+    "2017": [
+      {
+        "category": {
+          "en": "Optical Transmission Equipment",
+          "zh-TW": "光傳輸設備專案"
+        },
+        "title": {
+          "en": "DTN-X build (SG) & multi-country expansions",
+          "zh-TW": "DTN-X 系統建置（新加坡）暨多國擴充"
+        },
+        "customer": "Infinera"
+      },
+      {
+        "category": {
+          "en": "Optical Transmission Equipment",
+          "zh-TW": "光傳輸設備專案"
+        },
+        "title": {
+          "en": "CX migration project",
+          "zh-TW": "CX 遷移專案"
+        },
+        "customer": "Infinera"
+      },
+      {
+        "category": {
+          "en": "Optical Transmission Equipment",
+          "zh-TW": "光傳輸設備專案"
+        },
+        "title": {
+          "en": "6500 & Waveserver builds",
+          "zh-TW": "6500 與 Waveserver 系統建置"
+        },
+        "customer": "Ciena"
+      },
+      {
+        "category": {
+          "en": "Optical Transmission Equipment",
+          "zh-TW": "光傳輸設備專案"
+        },
+        "title": {
+          "en": "Asia transmission deployments",
+          "zh-TW": "亞太光纖傳輸部署"
+        },
+        "customer": "Telstra"
+      },
+      {
+        "category": {
+          "en": "Optical Transmission Equipment",
+          "zh-TW": "光傳輸設備專案"
+        },
+        "title": {
+          "en": "network expansion & cabling",
+          "zh-TW": "網路擴充與佈線"
+        },
+        "customer": "AT&T"
+      },
+      {
+        "category": {
+          "en": "Optical Transmission Equipment",
+          "zh-TW": "光傳輸設備專案"
+        },
+        "title": {
+          "en": "EU & HK Huawei expansions",
+          "zh-TW": "歐洲與香港華為設備擴充"
+        },
+        "customer": "PCCW"
+      },
+      {
+        "category": {
+          "en": "Smart Hands & Maintenance",
+          "zh-TW": "現場支援與維護"
+        },
+        "title": {
+          "en": "smart-hands support",
+          "zh-TW": "現場支援服務"
+        },
+        "customer": "Meta"
+      }
+    ],
+
+    "2016": [
+      {
+        "category": {
+          "en": "Hyperscale & Enterprise Data Center",
+          "zh-TW": "大型數據中心專案"
+        },
+        "title": {
+          "en": "Dubai IDC network build",
+          "zh-TW": "杜拜 IDC 網路建置"
+        },
+        "customer": "ECCOM"
+      },
+      {
+        "category": {
+          "en": "Submarine Cable & CLS Infrastructure",
+          "zh-TW": "CLS海纜登陸站基礎建設"
+        },
+        "title": {
+          "en": "CLS DWDM integration & commissioning",
+          "zh-TW": "海纜登陸站 DWDM 系統整合與開通"
+        },
+        "customer": "Telstra"
+      },
+      {
+        "category": {
+          "en": "Optical Transmission Equipment",
+          "zh-TW": "光傳輸設備專案"
+        },
+        "title": {
+          "en": "telecom cabling",
+          "zh-TW": "電信佈線"
+        },
+        "customer": "AT&T"
+      },
+      {
+        "category": {
+          "en": "Optical Transmission Equipment",
+          "zh-TW": "光傳輸設備專案"
+        },
+        "title": {
+          "en": "DTN-X expansions (HK & TW)",
+          "zh-TW": "DTN-X 系統擴充（港、台）"
+        },
+        "customer": "Infinera"
+      },
+      {
+        "category": {
+          "en": "Smart Hands & Maintenance",
+          "zh-TW": "現場支援與維護"
+        },
+        "title": {
+          "en": "smart-hands support",
+          "zh-TW": "現場支援服務"
+        },
+        "customer": "Meta"
+      }
+    ]
+  }
+}
