@@ -1,9 +1,15 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import referencesData from '../../data/references.json';
+import { customerAliases } from '../../data/customerAliases';
 
 const { years } = referencesData;
 const yearList = Object.keys(years).sort((a, b) => b - a);
+
+// 客戶名稱轉換函數
+function getDisplayName(customer: string) {
+    return customerAliases[customer] || customer;
+}
 
 function groupByCategory(projects) {
     return projects.reduce((acc, project) => {
@@ -11,7 +17,10 @@ function groupByCategory(projects) {
         if (!acc[category]) {
             acc[category] = [];
         }
-        acc[category].push(project);
+        acc[category].push({
+            ...project,
+            customer: getDisplayName(project.customer)
+        });
         return acc;
     }, {});
 }
