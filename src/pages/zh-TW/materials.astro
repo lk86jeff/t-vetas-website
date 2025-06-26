@@ -1,0 +1,301 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const materials = [
+  {
+    id: "corning",
+    name: "CORNING (康寧)",
+    desc: "全球知名光纖與佈線解決方案供應商，提供高品質光纖、連接器及相關產品。",
+    details: [
+      {
+        category: "線材/cable",
+        items: [
+          "305M box CAT6 /CAT6A cable",
+          "copper patch panel",
+          "CAT6/CAT6A RJ45 module Jack",
+          "copper patch lead",
+          "copper test tools"
+        ]
+      },
+      {
+        category: "光纖/fiber",
+        items: [
+          "fiber trunk cable",
+          "fiber patch panel (fiber housing)",
+          "LC/SC adapter /cassette",
+          "fiber patch lead (LC /SC/MTP)",
+          "fiber test tools"
+        ]
+      }
+    ]
+  },
+  {
+    id: "panduit",
+    name: "Panduit",
+    desc: "結構化佈線與機房基礎設施領導品牌，產品涵蓋線纜、配線架等。",
+    details: [
+      {
+        category: "線材/cable",
+        items: [
+          "305M box CAT6 /CAT6A cable",
+          "copper patch panel",
+          "CAT6/CAT6A RJ45 module Jack",
+          "copper patch lead",
+          "copper test tools"
+        ]
+      },
+      {
+        category: "光纖/fiber",
+        items: [
+          "fiber trunk cable",
+          "fiber patch panel (fiber housing)",
+          "LC/SC adapter /cassette",
+          "fiber patch lead (LC /SC/MTP)",
+          "fiber test tools"
+        ]
+      },
+      {
+        category: "機櫃/RACK",
+        items: [
+          "RACK and Accessories"
+        ]
+      },
+      {
+        category: "RPDU",
+        items: [
+          "Horizontal PDU , outlet C13+C19 /EMNA Socket , L6/IEC input connection",
+          "vertical PDU , outlet C13+C19 /EMNA Socket , L6/IEC input connection"
+        ]
+      }
+    ]
+  },
+  {
+    id: "ciena",
+    name: "Ciena",
+    desc: "領先的光傳輸與網路設備製造商，專注於高速資料傳輸與網路基礎建設。",
+    details: [
+      {
+        category: "devices",
+        items: [
+          "CIENA 6500",
+          "WAVESERVER Ai"
+        ]
+      }
+    ]
+  },
+  {
+    id: "infinera",
+    name: "Infinera",
+    desc: "專業光傳輸網路解決方案供應商，提供創新 DWDM 與傳輸技術。",
+    details: [
+      {
+        category: "devices",
+        items: [
+          "MTC 6 /9",
+          "G42"
+        ]
+      }
+    ]
+  },
+  {
+    id: "schneider",
+    name: "Schneider (施耐德), APC",
+    desc: "全球電力與自動化管理領導品牌，APC 為其資料中心電源與機櫃解決方案。",
+    details: [
+      {
+        category: "RPDU",
+        items: [
+          "Horizontal PDU , outlet C13+C19 /EMNA Socket , L6/IEC input connection",
+          "vertical PDU , outlet C13+C19 /EMNA Socket , L6/IEC input connection"
+        ]
+      },
+      {
+        category: "機櫃/RACK",
+        items: [
+          "RACK and Accessories"
+        ]
+      }
+    ]
+  },
+  {
+    id: "afl",
+    name: "AFL",
+    desc: "專注於光纖與網路基礎設施產品，提供多元化佈線解決方案。",
+    details: [
+      {
+        category: "光纖/fiber",
+        items: [
+          "fiber trunk cable",
+          "fiber patch panel (fiber housing)",
+          "LC/SC adapter /cassette",
+          "fiber patch lead (LC /SC/MTP)",
+          "fiber test tools"
+        ]
+      }
+    ]
+  },
+  {
+    id: "jpc",
+    name: "JPC",
+    desc: "台灣知名連接器與佈線產品製造商，產品應用廣泛。",
+    details: [
+      {
+        category: "SFP",
+        items: [
+          "1G-LX/LH SFP單模光模組 1310nm 10km DOM 雙工LC/UPC",
+          "10G-LX/LH SFP-LX/LH SFP單模光模組 1310nm 10km DOM 雙工LC/UPC",
+          "100G-LX/LH SFP-LX/LH SFP單模光模組 1310nm 10km DOM 雙工LC/UPC",
+          "Customization SFP"
+        ]
+      },
+      {
+        category: "光纖/fiber",
+        items: [
+          "fiber trunk cable",
+          "fiber patch panel (fiber housing)",
+          "LC/SC adapter",
+          "fiber patch lead (LC /SC/MTP)",
+          "fiber test tools"
+        ]
+      }
+    ]
+  },
+  {
+    id: "dell",
+    name: "Dell",
+    desc: "全球資訊科技領導品牌，提供伺服器、儲存與網路設備。",
+    details: [
+      {
+        category: "Server /伺服器",
+        items: [
+          "Dell laptop",
+          "Dell server",
+          "Dell KVM"
+        ]
+      }
+    ]
+  }
+];
+---
+
+<Layout title="物料供應" description="主要合作物料品牌與簡介" lang="zh-TW">
+  <div class="materials-container">
+    <h1 class="page-title">物料供應</h1>
+    <div class="materials-list">
+      {materials.map(mat => (
+        <section id={mat.id} class="material-card">
+          <h2>{mat.name}</h2>
+          <p>{mat.desc}</p>
+          {mat.details && (
+            <ul class="accordion-list">
+              {mat.details.map(detail => (
+                <li class="accordion-item">
+                  <button class="accordion-btn" type="button" aria-expanded="false">
+                    <span class="triangle"></span>
+                    {detail.category}
+                  </button>
+                  <ul class="accordion-content" style="display:none;">
+                    {detail.items.map(item => <li>{item}</li>)}
+                  </ul>
+                </li>
+              ))}
+            </ul>
+          )}
+        </section>
+      ))}
+    </div>
+  </div>
+  <script type="text/javascript" is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.accordion-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const content = this.nextElementSibling;
+          const triangle = this.querySelector('.triangle');
+          const expanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', !expanded);
+          if (expanded) {
+            content.style.display = 'none';
+            triangle.classList.remove('open');
+          } else {
+            content.style.display = 'block';
+            triangle.classList.add('open');
+          }
+        });
+      });
+    });
+  </script>
+</Layout>
+
+<style>
+.materials-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+.page-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #1A2A47;
+}
+.materials-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.material-card {
+  background: #f7fafc;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+  scroll-margin-top: 100px;
+}
+.material-card h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2D3748;
+  margin-bottom: 0.5rem;
+}
+.material-card p {
+  color: #4A5568;
+  font-size: 0.95rem;
+}
+.accordion-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.accordion-item {
+  margin-bottom: 0.5rem;
+}
+.accordion-btn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  width: 100%;
+  text-align: left;
+}
+.triangle {
+  display: inline-block;
+  margin-right: 0.5rem;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 10px solid #3182CE;
+  transition: transform 0.2s;
+}
+.triangle.open {
+  transform: rotate(180deg);
+}
+.accordion-content {
+  padding-left: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+</style>

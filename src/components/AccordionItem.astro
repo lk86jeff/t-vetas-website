@@ -1,0 +1,53 @@
+---
+// filepath: src/components/AccordionItem.astro
+const { title, items } = Astro.props;
+let open = false;
+function toggle() { open = !open; }
+---
+
+<li class="accordion-item">
+  <button class="accordion-btn" type="button" onClick={toggle}>
+    <span class={`triangle${open ? ' open' : ''}`}></span>
+    {title}
+  </button>
+  {open && (
+    <ul class="accordion-content">
+      {items.map(item => <li>{item}</li>)}
+    </ul>
+  )}
+</li>
+
+<style>
+.accordion-item {
+  margin-bottom: 0.5rem;
+}
+.accordion-btn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  width: 100%;
+  text-align: left;
+}
+.triangle {
+  display: inline-block;
+  margin-right: 0.5rem;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 10px solid #3182CE;
+  transition: transform 0.2s;
+}
+.triangle.open {
+  transform: rotate(180deg);
+}
+.accordion-content {
+  padding-left: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+</style>
