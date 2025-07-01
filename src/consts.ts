@@ -51,7 +51,7 @@ export const i18n = {
             email: 'Email: sales@t-vetas.com.tw',
             serviceTitle: 'Service Hours',
             serviceDays: 'Monday to Friday',
-            serviceHours: '09:00 - 18:00(UTC+8)',ㄕ
+            serviceHours: '09:00 - 18:00(UTC+8)',
         }
         // ...其他頁面的翻譯
     }
