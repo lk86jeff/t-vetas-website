@@ -23,14 +23,15 @@ export const i18n = {
             about: '關於我們',
             partners: '合作夥伴'
         },
-        about: {
-            title: '關於我們',
-            description: 'T-Vetas Network 致力於成為台灣最可靠的基礎建設服務商',
-            companyIntro: {
-                title: '公司簡介',
-                content: 'T-Vetas Network 成立於 2016 年，總部位於台灣...'
-            }
-            // ...其他翻譯內容
+        footer: {
+            slogan: '致力於成為最可靠的基礎建設服務商',
+            address: '台北市內湖區堤頂大道二段283號3樓',
+            contactTitle: '聯絡資訊',
+            phone: '電話：070-101-85099',
+            email: 'Email：sales@t-vetas.com.tw',
+            serviceTitle: '服務時間',
+            serviceDays: '週一至週五',
+            serviceHours: '09:00 - 18:00',
         }
         // ...其他頁面的翻譯
     },
@@ -42,14 +43,15 @@ export const i18n = {
             about: 'About',
             partners: 'Partners'
         },
-        about: {
-            title: 'About Us',
-            description: 'T-Vetas Network is committed to becoming Taiwan\'s most reliable infrastructure service provider',
-            companyIntro: {
-                title: 'Company Profile',
-                content: 'Founded in 2016 and headquartered in Taiwan...'
-            }
-            // ...其他翻譯內容
+        footer: {
+            slogan: 'Committed to being the most reliable infrastructure service provider',
+            address: '3 F., No. 283, Sec. 2, Tiding Blvd., Neihu Dist., Taipei City 114064, Taiwan (R.O.C.)',
+            contactTitle: 'Contact',
+            phone: 'Tel: 070-101-85099',
+            email: 'Email: sales@t-vetas.com.tw',
+            serviceTitle: 'Service Hours',
+            serviceDays: 'Monday to Friday',
+            serviceHours: '09:00 - 18:00(UTC+8)',ㄕ
         }
         // ...其他頁面的翻譯
     }

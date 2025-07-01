@@ -1,4 +1,8 @@
 ---
+import { i18n } from '../consts';
+const currentPath = Astro.url.pathname;
+const lang = currentPath.split('/')[1] || 'zh-TW';
+const t = i18n[lang];
 const today = new Date();
 ---
 
@@ -6,20 +10,20 @@ const today = new Date();
     <div class="footer-container">
         <div class="footer-section company-info">
             <h3>T-Vetas Network</h3>
-            <p>致力於成為最可靠的基礎建設服務商</p>
-            <p>台北市內湖區堤頂大道二段283號3樓</p>
+            <p>{t.footer?.slogan}</p>
+            <p>{t.footer?.address}</p>
         </div>
 
         <div class="footer-section contact">
-            <h3>聯絡資訊</h3>
-            <p>電話：070-101-85099</p>
-            <p>Email：sales@t-vetas.com.tw</p>
+            <h3>{t.footer?.contactTitle}</h3>
+            <p>{t.footer?.phone}</p>
+            <p>{t.footer?.email}</p>
         </div>
 
         <div class="footer-section service-hours">
-            <h3>服務時間</h3>
-            <p>週一至週五</p>
-            <p>09:00 - 18:00</p>
+            <h3>{t.footer?.serviceTitle}</h3>
+            <p>{t.footer?.serviceDays}</p>
+            <p>{t.footer?.serviceHours}</p>
         </div>
     </div>
 
