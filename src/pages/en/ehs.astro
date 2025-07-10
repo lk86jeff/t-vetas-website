@@ -1,0 +1,128 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+    title="EHS - Environmental, Health & Safety"
+    description="Overview of T-Vetas Network's EHS program"
+    lang="en"
+>
+    <section class="ehs-section">
+        <h1>Environmental, Health & Safety</h1>
+        <p>
+            T-Vetas Network places great emphasis on occupational safety. We maintain comprehensive guidelines and regular training to keep all staff safe on site.<br>
+            We believe <strong>Work Safely, Return Safely</strong> is fundamental and continually strengthen on-site management and awareness.
+        </p>
+    </section>
+
+    <section class="ehs-section policy-section">
+        <h1>Corporate Social Responsibility & EHS Policy</h1>
+        <div>
+            <p>
+                <strong>Business Ethics</strong><br>We operate with integrity and protect confidential information.
+            </p>
+            <p>
+                <strong>Employee Rights</strong><br>We comply with compensation laws and prohibit child labor.
+            </p>
+            <p>
+                <strong>EHS Commitment</strong><br>We strive for zero accidents through regular training and continual improvement.
+            </p>
+        </div>
+        <div class="policy-image-download">
+            <a href="/ehs-policy_zhtw.pdf" class="policy-download" download>Download EHS Policy Statement PDF</a>
+        </div>
+    </section>
+
+    <section class="ehs-section">
+        <h1>Key EHS Documents and Guidelines</h1>
+        <ul class="ehs-doc-list">
+            <li>EHS Manual for Contractors</li>
+            <li>Emergency Action Plan</li>
+            <li>Hazard Identification and Risk Assessment</li>
+            <li>Lockout/Tagout Procedures</li>
+            <li>Tool Safety and PPE</li>
+            <li>Fire Safety and Extinguisher Guide</li>
+            <li>Work at Height & Fall Prevention</li>
+            <li>Daily Hazard Notification</li>
+            <li>Incident Investigation & Records</li>
+            <li>Electrical Safety & Grounding Guide</li>
+            <li>MEWP Operation Regulation</li>
+            <li>Stop Work Authority</li>
+            <li>Subcontractor Safety Management</li>
+        </ul>
+        <p>
+            These documents cover on-site work, equipment operation, emergency response and incident investigation to ensure everyone follows standard procedures and stays safe.
+        </p>
+        <p>
+            For more details please <a href="/en/about#contact" class="vendor-link">contact us</a>.
+        </p>
+    </section>
+</Layout>
+
+<style>
+.ehs-section {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem 1.5rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.policy-section {
+    background: #f7fafc;
+    border-left: 4px solid #44B3FF;
+    margin-top: 0;
+}
+.policy-image-download {
+    text-align: center;
+    margin: 2rem 0 0 0;
+}
+.policy-img {
+    max-width: 350px;
+    width: 100%;
+    margin: 0 auto 1rem;
+    display: block;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.policy-download {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5em 1.2em;
+    background: #44B3FF;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+.policy-download:hover {
+    background: #FF7A00;
+}
+.ehs-doc-list {
+    margin: 1.5rem 0;
+    padding-left: 1.2rem;
+}
+.ehs-doc-list li {
+    margin-bottom: 0.5rem;
+    line-height: 1.7;
+}
+.ehs-section h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.2rem;
+    color: #1A2A47;
+    text-align: center;
+}
+.vendor-link {
+    color: #44B3FF;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.vendor-link:hover {
+    color: #FF7A00;
+    text-decoration: underline;
+}
+</style>

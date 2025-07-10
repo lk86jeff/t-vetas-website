@@ -1,0 +1,303 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const materials = [
+  {
+    id: "corning",
+    name: "CORNING",
+    desc: "World-renowned provider of fiber and cabling solutions offering high-quality fiber, connectors and related products.",
+    details: [
+      {
+        category: "Cables",
+        items: [
+          "305M box CAT6 /CAT6A cable",
+          `<a href="https://ecatalog.corning.com/optical-communications/CN/zh/Copper-Hardware/Everon%C2%AE-Copper-Datacom-Patch-Panels/c/nav-copper-panels?initialResultType=products" target="_blank" rel="noopener">copper patch panel</a>`,
+          "CAT6/CAT6A RJ45 module Jack",
+          "copper patch lead",
+          "copper test tools"
+        ]
+      },
+      {
+        category: "Fiber",
+        items: [
+          "fiber trunk cable",
+          `<a href="https://ecatalog.corning.com/optical-communications/US/en/c/nav-housings?initialResultType=products" target="_blank" rel="noopener">fiber patch panel (fiber housing)</a>`,
+          `<a href="https://ecatalog.corning.com/optical-communications/US/en/c/nav-panels-modules-cassettes?initialResultType=products&searchText=module" target="_blank" rel="noopener">LC/SC adapter /cassette</a>`,
+          `<a href="https://www.corning.com/optical-communications/worldwide/en/home/products/fiber-optic-cables.html" target="_blank" rel="noopener">fiber patch lead (LC /SC/MTP)</a>`,
+          "fiber test tools"
+        ]
+      }
+    ]
+  },
+  {
+    id: "panduit",
+    name: "Panduit",
+    desc: "Leading brand in structured cabling and data center infrastructure, offering cables, patch panels and more.",
+    details: [
+      {
+        category: "Cables",
+        items: [
+          "305M box CAT6 /CAT6A cable",
+          `<a href="https://www.panduit.com/en/products/copper-systems/patch-panels-accessories/populated-patch-panels.html" target="_blank" rel="noopener">copper patch panel</a>`,
+          "CAT6/CAT6A RJ45 module Jack",
+          `<a href="https://www.panduit.com/en/products/copper-systems/patch-cords-accessories/patch-cords.html" target="_blank" rel="noopener">copper patch lead</a>`,
+          "copper test tools"
+        ]
+      },
+      {
+        category: "Fiber",
+        items: [
+          `<a href="https://www.panduit.com/en/products/fiber-optic-systems/fiber-optic-cable-assemblies/fiber-optic-trunk-cable-assemblies.html" target="_blank" rel="noopener">fiber trunk cable</a>`,
+          `<a href="https://www.panduit.com/en/products/fiber-optic-systems/fiber-optic-panels-cassettes-enclosures/fiber-optic-panels.html" target="_blank" rel="noopener">fiber patch panel (fiber housing)</a>`,
+          `<a href="https://www.panduit.com/en/products/fiber-optic-systems/fiber-optic-panels-cassettes-enclosures/fiber-optic-cassettes.html" target="_blank" rel="noopener">LC/SC adapter /cassette</a>`,
+          "fiber patch lead (LC /SC/MTP)",
+          "fiber test tools"
+        ]
+      },
+      {
+        category: "RACK",
+        items: [
+          `<a href="https://www.panduit.com/en/products/cabinets-thermal-management-racks-enclosures/racks-accessories/racks.html" target="_blank" rel="noopener">RACK and Accessories</a>`,
+        ]
+      },
+      {
+        category: "RPDU",
+        items: [
+          `<a href="https://www.panduit.com/en/products/power-distribution-environmental-connectivity-hardware/power-distribution-units-pdus/pdus.html" target="_blank" rel="noopener">Horizontal PDU , outlet C13+C19 /EMNA Socket , L6/IEC input connection</a>`,
+          "vertical PDU , outlet C13+C19 /EMNA Socket , L6/IEC input connection"
+        ]
+      }
+    ]
+  },
+  {
+    id: "ciena",
+    name: "Ciena",
+    desc: "Leading manufacturer of optical transport and networking equipment focusing on high-speed data transmission and network infrastructure.",
+    details: [
+      {
+        category: "devices",
+        items: [
+          `<a href="https://www.ciena.com/products/6500" target="_blank" rel="noopener">CIENA 6500</a>`,
+          `<a href="https://www.ciena.com/products/waveserver" target="_blank" rel="noopener">WAVESERVER</a>`,
+        ]
+      }
+    ]
+  },
+  {
+    id: "infinera",
+    name: "Infinera",
+    desc: "Professional optical transport solution provider offering innovative DWDM and transmission technologies.",
+    details: [
+      {
+        category: "devices",
+        items: [
+          "MTC 6 /9",
+          `<a href="https://www.nokia.com/optical-networks/1830-global-express/" target="_blank" rel="noopener">G42</a>`,
+        ]
+      }
+    ]
+  },
+  {
+    id: "schneider",
+    name: "Schneider (施耐德), APC",
+    desc: "Global leader in power and automation management; APC provides data center power and rack solutions.",
+    details: [
+      {
+        category: "RPDU",
+        items: [
+          `<a href="https://www.se.com/tw/zh/product-subcategory/7410-%E6%A9%9F%E6%9E%B6%E5%BC%8F%E9%85%8D%E9%9B%BB%E8%A8%AD%E5%82%99-pdu/" target="_blank" rel="noopener">Horizontal PDU , outlet C13+C19 /EMNA Socket , L6/IEC input connection</a>`,
+          "vertical PDU , outlet C13+C19 /EMNA Socket , L6/IEC input connection"
+        ]
+      },
+      {
+        category: "RACK",
+        items: [
+          `<a href="https://www.se.com/tw/zh/product-category/7500-%E6%A9%9F%E6%9E%B6%E8%88%87%E9%85%8D%E4%BB%B6/" target="_blank" rel="noopener">RACK and Accessories</a>`,
+        ]
+      }
+    ]
+  },
+  {
+    id: "afl",
+    name: "AFL",
+    desc: "Focused on fiber and networking infrastructure products, providing diverse cabling solutions.",
+    details: [
+      {
+        category: "Fiber",
+        items: [
+          "fiber trunk cable",
+          "fiber patch panel (fiber housing)",
+          "LC/SC adapter /cassette",
+          `<a href="https://www.aflglobal.com/en/apac/Products/Fiber-Optic-Connectivity" target="_blank" rel="noopener">fiber patch lead (LC /SC/MTP)</a>`,
+          "fiber test tools"
+        ]
+      }
+    ]
+  },
+  {
+    id: "jpc",
+    name: "JPC",
+    desc: "Well-known Taiwanese manufacturer of connectors and cabling products.",
+    details: [
+      {
+        category: "SFP",
+        items: [
+          "1G-LX/LH SFP單模光模組 1310nm 10km DOM 雙工LC/UPC",
+          "10G-LX/LH SFP-LX/LH SFP單模光模組 1310nm 10km DOM 雙工LC/UPC",
+          "100G-LX/LH SFP-LX/LH SFP單模光模組 1310nm 10km DOM 雙工LC/UPC",
+          `<a href="https://www.jpcco.com/lang/tw/solution/DNT/ISP_Cable_Solution">Customization SFP</a>`,
+        ]
+      },
+      {
+        category: "Fiber",
+        items: [
+          "fiber trunk cable",
+          `<a href="https://www.jpcco.com/lang/tw/product/find/Changeable-Function_10D_Fiber_Patch_Panel_-_LGX_Solution">fiber patch panel (fiber housing)</a>`,
+          "LC/SC adapter",
+          "fiber patch lead (LC /SC/MTP)",
+          "fiber test tools"
+        ]
+      }
+    ]
+  },
+  {
+    id: "dell",
+    name: "Dell",
+    desc: "Global IT leader providing servers, storage and networking equipment.",
+    details: [
+      {
+        category: "Server",
+        items: [
+          `<a href="https://www.dell.com/zh-tw/shop/dell-laptops/scr/laptops" target="_blank" rel="noopener">Dell laptop</a>`,
+          `<a href="https://www.dell.com/zh-tw/shop/scc/sc/servers" target="_blank" rel="noopener">Dell server</a>`,
+          "Dell KVM"
+        ]
+      }
+    ]
+  }
+];
+---
+
+<Layout title="Material Supply" description="Overview of material partners" lang="en">
+  <div class="materials-container">
+    <h1 class="page-title">Material Supply</h1>
+    <div class="materials-list">
+      {materials.map(mat => (
+        <section id={mat.id} class="material-card">
+          <h2>{mat.name}</h2>
+          <p>{mat.desc}</p>
+          {mat.details && (
+            <ul class="accordion-list">
+              {mat.details.map(detail => (
+                <li class="accordion-item">
+                  <button class="accordion-btn" type="button" aria-expanded="false">
+                    <span class="triangle"></span>
+                    {detail.category}
+                  </button>
+                  <ul class="accordion-content" style="display:none;">
+                    {detail.items.map(item => (
+                      <li set:html={item}></li>
+                    ))}
+                  </ul>
+                </li>
+              ))}
+            </ul>
+          )}
+        </section>
+      ))}
+    </div>
+  </div>
+  <script type="text/javascript" is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.accordion-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const content = this.nextElementSibling;
+          const triangle = this.querySelector('.triangle');
+          const expanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', !expanded);
+          if (expanded) {
+            content.style.display = 'none';
+            triangle.classList.remove('open');
+          } else {
+            content.style.display = 'block';
+            triangle.classList.add('open');
+          }
+        });
+      });
+    });
+  </script>
+</Layout>
+
+<style>
+.materials-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+.page-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #1A2A47;
+}
+.materials-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.material-card {
+  background: #f7fafc;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+  scroll-margin-top: 100px;
+}
+.material-card h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2D3748;
+  margin-bottom: 0.5rem;
+}
+.material-card p {
+  color: #4A5568;
+  font-size: 0.95rem;
+}
+.accordion-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.accordion-item {
+  margin-bottom: 0.5rem;
+}
+.accordion-btn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  width: 100%;
+  text-align: left;
+}
+.triangle {
+  display: inline-block;
+  margin-right: 0.5rem;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 10px solid #3182CE;
+  transition: transform 0.2s;
+}
+.triangle.open {
+  transform: rotate(180deg);
+}
+.accordion-content {
+  padding-left: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+</style>
