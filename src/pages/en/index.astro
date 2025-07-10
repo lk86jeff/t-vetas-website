@@ -47,7 +47,6 @@ import FormattedDate from '../../components/FormattedDate.astro';
                     <img src="/logo.jpg" alt="T-Vetas Network Logo" />
                 </div>
                 <div class="title-container">
-                    <h1 class="company-name">T-Vetas Network</h1>
                     <h1 class="company-name-en">T-Vetas Network</h1>
                     <p class="company-intro">
                         Founded in Taiwan in 2016, we specialize in telecom engineering design, installation and commissioning, supporting VETAS projects across the Asia-Pacific region.
@@ -63,43 +62,43 @@ import FormattedDate from '../../components/FormattedDate.astro';
             </section>
 
             <section class="content-section bg-gray">
-                <h2>Target Customers</h2>
+                <h2>目標客群</h2>
                 <p>
-                    We serve global telecom operators, data center operators and enterprise network infrastructures, providing complete support for new builds and expansions.
+                    我們的服務對象涵蓋全球電信運營商、數據中心營運商與各類企業網路基礎設施，無論新建或擴容，都能提供完整支援。
                 </p>
             </section>
 
             <section class="content-section">
-                <h2>Service Highlights</h2>
+                <h2>服務亮點</h2>
                 <div class="services-grid">
                     <div class="service-card">
-                        <h3>Data Centers Data Centers & Facilities Facilities</h3>
-                        <p>Cabinet and raised floor systems, dedicated fiber ducts, trays and cabling design and commissioning.</p>
+                        <h3>數據中心與企業機房</h3>
+                        <p>機櫃與高架地板系統、專用光纖管道、橋架、配線架設計與調試。</p>
                     </div>
                     <div class="service-card">
-                        <h3>Network Solutions</h3>
-                        <p>SDH/WDM/IP/GPON network planning, implementation, integration and testing.</p>
+                        <h3>網路解決方案</h3>
+                        <p>SDH / WDM / IP / GPON 網路規劃、實施、整合與測試。</p>
                     </div>
                     <div class="service-card">
-                        <h3>Structured Cabling</h3>
-                        <p>Cat6A & fiber (OS1/OM4) cabling system design, testing and on-site commissioning.</p>
+                        <h3>結構化佈線</h3>
+                        <p>Cat6A & 光纖 (OS1/OM4) 佈線系統設計、測試與現場調試。</p>
                     </div>
                     <div class="service-card">
-                        <h3>Power Systems</h3>
-                        <p>AC/DC power design, UPS, ATS, backup batteries and testing services.</p>
+                        <h3>電力系統</h3>
+                        <p>AC / DC 電源設計、UPS、ATS、備用電池與測試調試服務。</p>
                     </div>
                 </div>
             </section>
 
             <section class="content-section bg-gray">
-                <h2>Key Clients Key Clients & Partners Partners</h2>
+                <h2>重要客戶與合作夥伴</h2>
                 <div class="clients-list">
                     <div class="client-category">
                         <ul>
-                            <li>Global leading software technology company</li>
-                            <li>World's largest social media service</li>
-                            <li>World's largest search engine company</li>
-                            <li>World's largest e-commerce company</li>
+                            <li>全球知名軟體科技公司</li>
+                            <li>全球最大社群網路服務商</li>
+                            <li>全球最大搜尋引擎公司</li>
+                            <li>全球最大電子商務公司</li>
                         </ul>
                     </div>
                 </div>
@@ -108,16 +107,16 @@ import FormattedDate from '../../components/FormattedDate.astro';
         <Footer />
         
         <script>
-            // wait for DOM
+            // 等待 DOM 完全載入後再執行
             document.addEventListener('DOMContentLoaded', () => {
                 let slideIndex = 1;
                 const slides = document.getElementsByClassName("slides");
                 const dots = document.getElementsByClassName("dot");
 
-                // show first slide
+                // 顯示初始幻燈片
                 showSlides(slideIndex);
 
-                // bind functions to window
+                // 將函數綁定到 window 對象，使其可以從 HTML 中調用
                 window.changeSlide = function(n) {
                     showSlides(slideIndex += n);
                 }
@@ -139,7 +138,7 @@ import FormattedDate from '../../components/FormattedDate.astro';
                     dots[slideIndex-1].className += " active";
                 }
 
-                // auto play
+                // 自動輪播
                 setInterval(() => {
                     window.changeSlide(1);
                 }, 5000);
@@ -157,12 +156,12 @@ import FormattedDate from '../../components/FormattedDate.astro';
         gap: 2rem;
         max-width: 1200px;
         margin: 0 auto;
-        min-height: 300px; /*/
+        min-height: 300px; /* 確保有足夠的高度 */
     }
 
     .logo-container {
         flex-shrink: 0;
-        width: 200px; /
+        width: 200px; /* 固定 logo 容器寬度 */
     }
 
     .logo-container img {
@@ -172,9 +171,9 @@ import FormattedDate from '../../components/FormattedDate.astro';
     }
 
     .title-container {
-        flex-grow: 1; /
+        flex-grow: 1; /* 允許標題容器成長 */
         text-align: center;
-        min-width: 400px; /
+        min-width: 400px; /* 確保有最小寬度 */
     }
 
     .company-name,
@@ -383,7 +382,7 @@ import FormattedDate from '../../components/FormattedDate.astro';
         }
 
         .title-container {
-            min-width: unset; /*/
+            min-width: unset; /* 移除最小寬度限制 */
             width: 100%;
             padding: 0 1rem;
         }

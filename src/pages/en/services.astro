@@ -3,9 +3,9 @@ import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout
-    title="服務項目"
+    title="Services"
     description="專業的數據中心與企業機房解決方案"
-    lang="zh-TW"
+    lang="en"
 >
     <section class="services-container">
         <h2 class="section-title">Services</h2>
@@ -15,11 +15,15 @@ import Layout from '../../layouts/Layout.astro';
 
         <div class="services-grid">
             <article class="service-card">
-                <h3>工程施工</h3>
-                <p class="card-description">為客戶提供電信機房/資料中心所需的設計/安裝等電信服務</p>
+                <h3>Engineering Construction</h3>
+                <p class="card-description">Supply customers with telecom services such as design/installation required for telecom rooms/data centers.</p>
                 <ul>
-                    <li>EHS (環境、健康與安全管理)</li>
-                    <li>BIM/CAD 工程設計與建模</li>
+                    <li>
+                        <a href="/en/ehs" class="vendor-link">EHS (環境、健康與安全管理)</a>
+                    </li>
+                    <li>
+                        <a href="/en/bim" class="vendor-link">BIM/CAD 工程設計與建模</a>
+                    </li>
                     <li>數據中心建置</li>
                     <li>電力系統規劃與施工</li>
                     <li>結構化佈線系統施工</li>
@@ -27,34 +31,34 @@ import Layout from '../../layouts/Layout.astro';
             </article>
 
             <article class="service-card">
-                <h3>物料供應</h3>
-                <p class="card-description">為客戶提供所需的施工物料，合作夥伴包含：</p>
+                <h3>Materials</h3>
+                <p class="card-description">Provide customers with the construction materials.</p>
                 <ul>
-                    <li>CORNING (康寧)</li>
-                    <li>Ciena</li>
-                    <li>Infinera</li>
-                    <li>Schneider (施耐德), APC</li>
-                    <li>Panduit</li>
-                    <li>AFL</li>
-                    <li>JPC</li>
-                    <li>Dell</li>
+                  <li><a href="/en/materials#corning" class="vendor-link">CORNING (康寧)</a></li>
+                  <li><a href="/en/materials#ciena" class="vendor-link">Ciena</a></li>
+                  <li><a href="/en/materials#infinera" class="vendor-link">Infinera</a></li>
+                  <li><a href="/en/materials#schneider" class="vendor-link">Schneider (施耐德), APC</a></li>
+                  <li><a href="/en/materials#panduit" class="vendor-link">Panduit</a></li>
+                  <li><a href="/en/materials#afl" class="vendor-link">AFL</a></li>
+                  <li><a href="/en/materials#jpc" class="vendor-link">JPC</a></li>
+                  <li><a href="/en/materials#dell" class="vendor-link">Dell</a></li>
                 </ul>
             </article>
 
             <article class="service-card">
-                <h3>證書</h3>
-                <p class="card-description">證書是展現一個公司安裝/測試人員的品質的方法, 我們公司擁有許多跨國公司的認證</p>
+                <h3>Certificate</h3>
+                <p class="card-description">Certification is a way to demonstrate the quality of a company's installers/testers. Our company has certifications from many multinational companies.</p>
                 <ul>
-                    <li>CORNING (康寧)</li>
-                    <li>Ciena</li>
+                    <li><a href="/en/certificates#corning" class="vendor-link">CORNING (康寧)</a></li>
+                    <li><a href="/en/certificates#ciena" class="vendor-link">Ciena</a></li>
                     <li>Infinera</li>
-                    <li>Panduit</li>
+                    <li><a href="/en/certificates#panduit" class="vendor-link">Panduit</a></li>
                 </ul>
             </article>
 
             <article class="service-card">
-                <h3>網路解決方案</h3>
-                <p class="card-description">我們針對客戶的需求提供不同的網路解決方案</p>
+                <h3>Network solution</h3>
+                <p class="card-description">We provide different network solutions according to customer needs.</p>
                 <ul>
                     <li>IP network</li>
                     <li>SDH/WDM network</li>
@@ -63,14 +67,17 @@ import Layout from '../../layouts/Layout.astro';
             </article>
 
             <article class="service-card">
-                <h3>維護</h3>
-                <p class="card-description">我們為許多企業提供智慧手服務，確保客戶的服務全年365天正常運作</p>
+                <h3>Maintain</h3>
+                <p class="card-description">We provides smart hand services for many companies, ensuring that customers' services can operate normally 365 days a year.</p>
                 <ul>
-                    <li>XXXX Smarthand</li>
-                    <li>XXXXXXXXX smarthand</li>
-                    <li>XXXXXX smarthand</li>
-                    <li>XXXXXXX Smarthand</li>
-                    <li>XXXX smarthand</li>
+                    <li>RMA 故障設備更換服務</li>
+                    <li>5x8 基本維護支援</li>
+                    <li>7x24 全天候緊急支援</li>
+                    <li>結構化佈線系統維護</li>
+                    <li>定期巡檢與預防性維護</li>
+                    <li>遠端技術支援與諮詢</li>
+                    <li>現場故障排除服務</li>
+                    <li>系統效能監控與優化</li>
                 </ul>
             </article>
 
@@ -86,8 +93,8 @@ import Layout from '../../layouts/Layout.astro';
 }
 
 .section-title {
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 1.5rem;        /* 從 2rem 改小 */
+    font-weight: 600;         /* 從 bold 改為 600 */
     text-align: center;
     color: #1A2A47;
     margin-bottom: 1rem;
@@ -96,6 +103,7 @@ import Layout from '../../layouts/Layout.astro';
 .section-description {
     text-align: center;
     color: #4a5568;
+    font-size: 1rem;         /* 加入字體大小設定 */
     max-width: 800px;
     margin: 0 auto 3rem auto;
     line-height: 1.6;
@@ -109,22 +117,80 @@ import Layout from '../../layouts/Layout.astro';
 
 .service-card {
     background: white;
-    padding: 1.5rem;
+    padding: 1.8rem;
     border-radius: 0.5rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 工程施工卡片 - 藍色主題 */
+.service-card:nth-child(1) {
+    border-top: 4px solid #44B3FF;
+    background: linear-gradient(to bottom right, #ffffff, #f0f9ff);
+}
+
+/* 物料供應卡片 - 綠色主題 */
+.service-card:nth-child(2) {
+    border-top: 4px solid #48BB78;
+    background: linear-gradient(to bottom right, #ffffff, #f0fff4);
+}
+
+/* 證書卡片 - 金色主題 */
+.service-card:nth-child(3) {
+    border-top: 4px solid #ECC94B;
+    background: linear-gradient(to bottom right, #ffffff, #fffff0);
+}
+
+/* 網路解決方案卡片 - 紫色主題 */
+.service-card:nth-child(4) {
+    border-top: 4px solid #9F7AEA;
+    background: linear-gradient(to bottom right, #ffffff, #faf5ff);
+}
+
+/* 維護卡片 - 橘色主題 */
+.service-card:nth-child(5) {
+    border-top: 4px solid #ED8936;
+    background: linear-gradient(to bottom right, #ffffff, #fffaf0);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.15);
 }
 
 .service-card h3 {
-    font-size: 1.25rem;
+    font-size: 1.1rem;       /* 從 1.25rem 改小 */
     font-weight: 600;
-    color: #1A2A47;
     margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.service-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: currentColor;
+    opacity: 0.3;
+}
+
+.card-description {
+    color: #4a5568;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    font-size: 0.9rem;      /* 從 0.95rem 改小 */
 }
 
 .service-card ul {
     list-style-type: disc;
     padding-left: 1.5rem;
     color: #4a5568;
+    font-size: 0.9rem;      /* 加入字體大小設定 */
 }
 
 .service-card li {
@@ -141,11 +207,15 @@ import Layout from '../../layouts/Layout.astro';
     line-height: 1.6;
 }
 
-.card-description {
-    color: #4a5568;
-    margin-bottom: 1rem;
-    line-height: 1.6;
-    font-size: 0.95rem;
+.vendor-link {
+    color: #44B3FF;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.vendor-link:hover {
+    color: #FF7A00;
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
