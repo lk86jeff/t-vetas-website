@@ -3,27 +3,29 @@ import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout
-    title="客戶與合作夥伴"
+    title="Partners"
     description="與全球頂尖企業合作，提供最優質的基礎建設服務"
-    lang="en"
+    lang="zh-TW"
 >
     <div class="partners-container">
         <section class="partners-section">
-            <h2>International Customers</h2>
+            <h2>Global Clients</h2>
             <div class="clients-list">
                 <ul>
-                    <li>XXXXXXXXX</li>
-                    <li>XXXX</li>
-                    <li>XXXX</li>
-                    <li>XXXX</li>
-                    <li>XXXXXXX</li>
-                    <li>XXXXX</li>
+                    <li>Global leading software technology company</li>
+                    <li>World's largest social media service</li>
+                    <li>World's largest search engine company</li>
+                    <li>World's largest e-commerce company</li>
+                    <li>PCCW Global</li>
+                    <li>AT&T Global Network Solutions</li>
+                    <li>Telstra</li>
+                    <li>Reach</li>
                 </ul>
             </div>
         </section>
 
         <section class="partners-section">
-            <h2>台灣客戶</h2>
+            <h2>Clients in Taiwan</h2>
             <div class="logo-grid">
                 <div class="logo-card">
                     <img src="/partners/pchome.png" alt="PCHOME" />
@@ -45,15 +47,15 @@ import Layout from '../../layouts/Layout.astro';
         </section>
 
         <section class="partners-section">
-            <h2>設備與服務合作夥伴</h2>
-            <div class="logo-grid">
-                <div class="logo-card">
-                    <img src="/partners/ciena.png" alt="Ciena" />
-                    <p>Ciena</p>
+            <h2>Equipment & Service Partners</h2>
+            <div class="partner-list">
+                <div class="partner-item">
+                    <h3>Ciena</h3>
+                    <p>Professional Network Equipment Supplier</p>
                 </div>
-                <div class="logo-card">
-                    <img src="/partners/infinera.png" alt="Infinera" />
-                    <p>Infinera</p>
+                <div class="partner-item">
+                    <h3>Infinera</h3>
+                    <p>Optical Transmission Solution Provider</p>
                 </div>
                 <div class="logo-card">
                     <img src="/partners/hwacom.png" alt="Hwa Com" />
@@ -63,15 +65,15 @@ import Layout from '../../layouts/Layout.astro';
         </section>
 
         <section class="partners-section">
-            <h2>供應商</h2>
+            <h2>Suppliers</h2>
             <div class="logo-grid">
                 <div class="logo-card">
                     <img src="/partners/jpc.png" alt="JPC" />
-                    <p>JPC (光纖材料/GBIC)</p>
+                    <p>JPC (fiber/GBIC)</p>
                 </div>
                 <div class="logo-card">
                     <img src="/partners/wesco.png" alt="WESCO" />
-                    <p>WESCO (電信材料)</p>
+                    <p>WESCO</p>
                 </div>
             </div>
         </section>
@@ -126,6 +128,61 @@ import Layout from '../../layouts/Layout.astro';
     font-size: 0.9rem;
 }
 
+.clients-list {
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.clients-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.clients-list li {
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    color: #1A2A47;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.clients-list li:last-child {
+    border-bottom: none;
+}
+
+.partner-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    align-items: start;
+}
+
+.partner-item {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.partner-item:hover {
+    transform: translateY(-5px);
+}
+
+.partner-item h3 {
+    color: #1A2A47;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.partner-item p {
+    color: #4a5568;
+    font-size: 1.1rem;
+}
+
 @media (max-width: 640px) {
     .partners-container {
         padding: 1rem;
@@ -138,6 +195,15 @@ import Layout from '../../layouts/Layout.astro';
 
     .logo-card img {
         max-width: 100px;
+    }
+
+    .clients-list {
+        padding: 1rem;
+    }
+
+    .clients-list li {
+        font-size: 1rem;
+        padding: 0.75rem 0;
     }
 }
 </style>

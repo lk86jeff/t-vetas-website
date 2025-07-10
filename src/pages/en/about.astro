@@ -3,78 +3,97 @@ import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout
-    title="關於我們"
-    description="T-Vetas Network 致力於成為台灣最可靠的基礎建設服務商"
+    title="About Us"
+    description="T-Vetas Network is committed to becoming Taiwan’s most trusted infrastructure services provider."
     lang="en"
 >
     <div class="about-container">
-        <h1 class="main-title">About us</h1>
-        
+        <h1 class="main-title">About Us</h1>
+
+        <!-- Company Introduction -->
         <section class="company-intro">
             <p class="intro-text">
-                T-Vetas Network 成立於 <strong>2016 年</strong>，總部位於台灣。公司由一群在電信工程、電機工程、機械工程及專案交付與管理領域擁有豐富實務經驗的工程師所創立，
-                目標是為亞太區各大電信與企業客戶提供 <em>高品質、可擴展且具成本效益</em> 的基礎設施建置與管理服務。
+                Founded in <strong>2016</strong> and headquartered in Taiwan, <em>T-Vetas Network</em> was established by a team of engineers with extensive hands-on experience in telecom, electrical and mechanical engineering, as well as project delivery and management.  
+                Our mission is to provide <em>high-quality, scalable, and cost-effective</em> infrastructure construction and management services for leading telecom and enterprise customers across the Asia-Pacific region.
             </p>
         </section>
 
+        <!-- Team Expertise -->
         <section class="team-expertise">
-            <h2>團隊專業實力</h2>
+            <h2>Our Expertise</h2>
             <p>
-                我們的大部分成員皆擁有 <strong>10 年以上</strong> 電信產業經驗，涵蓋
-                <span class="service-flow">規劃設計 → 施工安裝 → 現場調試 → 持續維運</span> 
-                的完整服務流程，累積多項大型數據中心及跨國光纖傳輸專案成功案例。
+                More than <strong>70&nbsp;% of our staff have over 10&nbsp;years of industry experience</strong>, covering the complete service flow of  
+                <span class="service-flow">Planning &amp; Design → Installation → On-site Commissioning → Ongoing Maintenance</span>.  
+                This enables us to deliver large-scale data center and cross-border optical-transmission projects with proven success.
             </p>
         </section>
 
+        <!-- Vision -->
         <section class="vision">
-            <h2>公司願景</h2>
+            <h2>Vision</h2>
             <p>
-                成為 <strong>台灣最可靠的電信、企業與數據中心基礎設施構建和管理服務供應商</strong>，並持續拓展亞太市場，為客戶提供一站式的關鍵基礎架構解決方案。
+                To become <strong>Taiwan’s most reliable provider of telecom, enterprise, and data-center infrastructure construction and management services</strong>, while expanding our one-stop critical-infrastructure solutions throughout the Asia-Pacific market.
             </p>
         </section>
 
+        <!-- Core Values -->
         <section class="core-values">
-            <h2>核心價值與理念</h2>
+            <h2>Core Values &amp; Philosophy</h2>
             <ul class="values-list">
-                <li>洞悉市場對 <strong>專業材料採購與工程承包</strong> 的需求，提供即時且可靠的供應服務。</li>
-                <li>以 <strong>合理成本</strong> 交付 <strong>高品質、適用</strong> 的工程與技術解決方案。</li>
-                <li>與客戶及合作夥伴建立長期互信，共同 <strong>創造並累積價值</strong>。</li>
+                <li>Anticipate market needs for <strong>professional material sourcing and engineering contracting</strong>, providing timely and dependable supply services.</li>
+                <li>Deliver <strong>high-quality, fit-for-purpose</strong> engineering and technical solutions at a <strong>competitive cost</strong>.</li>
+                <li>Build long-term, trust-based partnerships with clients and partners to <strong>create and accumulate value together</strong>.</li>
             </ul>
         </section>
 
+        <!-- Company Scale -->
         <section class="company-scale">
-            <h2>在台灣的堅實陣容</h2>
+            <h2>Strength in Taiwan</h2>
             <p>
-                我們在台擁有 <strong>15 名直屬員工</strong> 以及 <strong>3 名以上間接支援人員</strong>，確保在地專案能以最高效率與品質完成。
+                Our Taiwan team comprises <strong>15 full-time employees</strong> and more than <strong>3 contingent support staff</strong>, ensuring every local project is executed with maximum efficiency and quality.
             </p>
         </section>
 
+        <!-- Branch Information -->
         <section class="branch-info">
-            <h2>台北分公司</h2>
-            <p>
-                台北分公司專責 <strong>設計、安裝與調試</strong> 服務，快速響應台灣及周邊區域的客戶需求，並協同總部資源，為每一個專案提供完整技術支援與後續維運。
-            </p>
+            <h2>Operating Sites</h2>
+            <div class="branch-grid">
+                <div class="branch-card">
+                    <h3>Taipei Branch</h3>
+                    <p>
+                        The Taipei branch focuses on <strong>design, installation, and commissioning</strong>, enabling rapid response to customer needs in Taiwan and neighboring regions while coordinating with headquarters to provide full technical support and post-deployment services.
+                    </p>
+                </div>
+
+                <div class="branch-card">
+                    <h3>Taoyuan Branch</h3>
+                    <p>
+                        Specializing in <strong>large-scale data-center network build-outs and operations</strong>, the Taoyuan branch leverages deep experience in enterprise-class network architecture to deliver end-to-end planning, deployment, and maintenance.
+                    </p>
+                </div>
+            </div>
         </section>
 
-        <section class="contact-info">
-            <h2>聯絡我們</h2>
+        <!-- Contact -->
+        <section id="contact" class="contact-info">
+            <h2>Contact</h2>
             <div class="contact-grid">
                 <div class="contact-card">
-                    <h3>業務諮詢</h3>
-                    <p>電話: 070-101-85099</p>
-                    <p>Email: alpha@vetastech.com</p>
-                    <p>服務時間: 週一至週五 09:00-18:00</p>
+                    <h3>Business Inquiries</h3>
+                    <p>Tel: +886-70-101-85099</p>
+                    <p>Email: sales@t-vetas.com.tw</p>
+                    <p>Service Hours: Monday – Friday, 09:00 – 18:00 (UTC+8)</p>
                 </div>
 
                 <div class="contact-card">
-                    <h3>公司地址</h3>
-                    <p>114 台北市內湖區堤頂大道二段283號3樓</p>
+                    <h3>Address</h3>
+                    <p>3F., No. 283, Sec. 2, Tiding Blvd., Neihu Dist., Taipei City 114064, Taiwan (R.O.C.)</p>
                     <div class="map-wrapper">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.6883931254256!2d121.56317797592709!3d25.078548536495166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ad000eb08a09%3A0x46e92eabbd8dafac!2z5Y-w54Gj57at54m557ay6Lev6IKh5Lu95pyJ6ZmQ5YWs5Y-4!5e0!3m2!1szh-TW!2stw!4v1744875550151!5m2!1szh-TW!2stw" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.6883931254256!2d121.56317797592709!3d25.078548536495166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ad000eb08a09%3A0x46e92eabbd8dafac!2z5Y-w54Gj57at54m557ay6Lev6IKh5Lu95pyJ6ZmQ5YWs5Y-4!5e0!3m2!1sen!2stw!4v1744875550151!5m2!1sen!2stw"
+                            style="border:0;"
+                            allowfullscreen
+                            loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"
                         ></iframe>
                     </div>
@@ -83,6 +102,7 @@ import Layout from '../../layouts/Layout.astro';
         </section>
     </div>
 </Layout>
+
 
 <style>
 .about-container {
@@ -169,6 +189,8 @@ strong {
 .contact-card h3 {
     color: #1A2A47;
     margin-bottom: 1rem;
+    font-size: 1.5rem;  /* 將原本預設的大小調小 */
+    font-weight: 600;   /* 適當調整粗細度 */
 }
 
 .contact-card p {
@@ -217,6 +239,32 @@ strong {
     max-width: 800px;
     margin: 0 auto 3rem;
     line-height: 1.6;
+}
+
+.branch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.branch-card {
+    padding: 2rem;
+    background: #f5f7fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.branch-card h3 {
+    color: #1A2A47;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;  /* 將原本預設的大小調小 */
+    font-weight: 600;   /* 適當調整粗細度 */
+}
+
+.branch-card p {
+    margin-bottom: 0;
+    line-height: 1.7;
 }
 
 @media (max-width: 768px) {
