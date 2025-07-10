@@ -62,43 +62,43 @@ import FormattedDate from '../../components/FormattedDate.astro';
             </section>
 
             <section class="content-section bg-gray">
-                <h2>目標客群</h2>
+                <h2>Target Customers</h2>
                 <p>
-                    我們的服務對象涵蓋全球電信運營商、數據中心營運商與各類企業網路基礎設施，無論新建或擴容，都能提供完整支援。
+                    We serve global telecom operators, data center operators and enterprise network infrastructures, providing complete support for new builds and expansions.
                 </p>
             </section>
 
             <section class="content-section">
-                <h2>服務亮點</h2>
+                <h2>Service Highlights</h2>
                 <div class="services-grid">
                     <div class="service-card">
-                        <h3>數據中心與企業機房</h3>
-                        <p>機櫃與高架地板系統、專用光纖管道、橋架、配線架設計與調試。</p>
+                        <h3>Data Centers Data Centers & Facilities Facilities</h3>
+                        <p>Cabinet and raised floor systems, dedicated fiber ducts, trays and cabling design and commissioning.</p>
                     </div>
                     <div class="service-card">
-                        <h3>網路解決方案</h3>
-                        <p>SDH / WDM / IP / GPON 網路規劃、實施、整合與測試。</p>
+                        <h3>Network Solutions</h3>
+                        <p>SDH/WDM/IP/GPON network planning, implementation, integration and testing.</p>
                     </div>
                     <div class="service-card">
-                        <h3>結構化佈線</h3>
-                        <p>Cat6A & 光纖 (OS1/OM4) 佈線系統設計、測試與現場調試。</p>
+                        <h3>Structured Cabling</h3>
+                        <p>Cat6A & fiber (OS1/OM4) cabling system design, testing and on-site commissioning.</p>
                     </div>
                     <div class="service-card">
-                        <h3>電力系統</h3>
-                        <p>AC / DC 電源設計、UPS、ATS、備用電池與測試調試服務。</p>
+                        <h3>Power Systems</h3>
+                        <p>AC/DC power design, UPS, ATS, backup batteries and testing services.</p>
                     </div>
                 </div>
             </section>
 
             <section class="content-section bg-gray">
-                <h2>重要客戶與合作夥伴</h2>
+                <h2>Key Clients Key Clients & Partners Partners</h2>
                 <div class="clients-list">
                     <div class="client-category">
                         <ul>
-                            <li>全球知名軟體科技公司</li>
-                            <li>全球最大社群網路服務商</li>
-                            <li>全球最大搜尋引擎公司</li>
-                            <li>全球最大電子商務公司</li>
+                            <li>Global leading software technology company</li>
+                            <li>World's largest social media service</li>
+                            <li>World's largest search engine company</li>
+                            <li>World's largest e-commerce company</li>
                         </ul>
                     </div>
                 </div>
@@ -316,13 +316,18 @@ import FormattedDate from '../../components/FormattedDate.astro';
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        padding: 16px;
+        width: 48px;           /* 新增 */
+        height: 48px;          /* 新增 */
+        padding: 0;            /* 改為 0 */
         color: white;
         font-weight: bold;
         font-size: 24px;
         background: rgba(0,0,0,0.3);
         border: none;
         border-radius: 50%;
+        display: flex;         /* 新增 */
+        align-items: center;   /* 新增 */
+        justify-content: center; /* 新增 */
         transition: 0.3s ease;
     }
 
