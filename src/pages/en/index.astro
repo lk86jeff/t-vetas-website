@@ -17,71 +17,134 @@ import FormattedDate from '../../components/FormattedDate.astro';
     <body>
         <Header />
         <main>
+            <div class="slideshow-container">
+                <div class="slides fade">
+                    <img src="/slides/slide1.jpg" />
+                </div>
+                <div class="slides fade">
+                    <img src="/slides/slide2.jpg" />
+                </div>
+                <div class="slides fade">
+                    <img src="/slides/slide3.jpg" />
+                </div>
+                <div class="slides fade">
+                    <img src="/slides/slide4.jpg" />
+                </div>
+                
+                <button class="prev" onclick="changeSlide(-1)">❮</button>
+                <button class="next" onclick="changeSlide(1)">❯</button>
+                
+                <div class="dots">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
+            </div>
+
             <div class="hero-section">
                 <div class="logo-container">
                     <img src="/logo.jpg" alt="T-Vetas Network Logo" />
                 </div>
                 <div class="title-container">
+                    <h1 class="company-name">T-Vetas Network</h1>
                     <h1 class="company-name-en">T-Vetas Network</h1>
                     <p class="company-intro">
-                        2016 年於台灣成立，專注提供電信工程設計、安裝與調試服務，並為亞太地區的 VETAS 專案提供專業現場支援。
+                        Founded in Taiwan in 2016, we specialize in telecom engineering design, installation and commissioning, supporting VETAS projects across the Asia-Pacific region.
                     </p>
                 </div>
             </div>
 
             <section class="content-section">
-                <h2>我們的核心價值與理念</h2>
+                <h2>Our Core Values</h2>
                 <p>
-                    T-Vetas Network 致力於以合理成本提供高品質、客製化工程服務，並持續追求最佳解決方案，滿足客戶多樣化需求。
+                    T-Vetas Network delivers high-quality customized engineering services at reasonable cost and continually pursues optimal solutions for diverse client needs.
                 </p>
             </section>
 
             <section class="content-section bg-gray">
-                <h2>目標客群</h2>
+                <h2>Target Customers</h2>
                 <p>
-                    我們的服務對象涵蓋全球電信運營商、數據中心營運商與各類企業網路基礎設施，無論新建或擴容，都能提供完整支援。
+                    We serve global telecom operators, data center operators and enterprise network infrastructures, providing complete support for new builds and expansions.
                 </p>
             </section>
 
             <section class="content-section">
-                <h2>服務亮點</h2>
+                <h2>Service Highlights</h2>
                 <div class="services-grid">
                     <div class="service-card">
-                        <h3>數據中心與企業機房</h3>
-                        <p>機櫃與高架地板系統、專用光纖管道、橋架、配線架設計與調試。</p>
+                        <h3>Data Centers Data Centers & Facilities Facilities</h3>
+                        <p>Cabinet and raised floor systems, dedicated fiber ducts, trays and cabling design and commissioning.</p>
                     </div>
                     <div class="service-card">
-                        <h3>網路解決方案</h3>
-                        <p>SDH / WDM / IP / GPON 網路規劃、實施、整合與測試。</p>
+                        <h3>Network Solutions</h3>
+                        <p>SDH/WDM/IP/GPON network planning, implementation, integration and testing.</p>
                     </div>
                     <div class="service-card">
-                        <h3>結構化佈線</h3>
-                        <p>Cat6A & 光纖 (OS1/OM4) 佈線系統設計、測試與現場調試。</p>
+                        <h3>Structured Cabling</h3>
+                        <p>Cat6A & fiber (OS1/OM4) cabling system design, testing and on-site commissioning.</p>
                     </div>
                     <div class="service-card">
-                        <h3>電力系統</h3>
-                        <p>AC / DC 電源設計、UPS、ATS、備用電池與測試調試服務。</p>
+                        <h3>Power Systems</h3>
+                        <p>AC/DC power design, UPS, ATS, backup batteries and testing services.</p>
                     </div>
                 </div>
             </section>
 
             <section class="content-section bg-gray">
-                <h2>重要客戶與合作夥伴</h2>
+                <h2>Key Clients Key Clients & Partners Partners</h2>
                 <div class="clients-list">
                     <div class="client-category">
                         <ul>
-                            <li>XXXXXXXXX</li>
-                            <li>XXXX</li>
-                            <li>XXXX</li>
-                            <li>XXXXXXX</li>
-                            <li>XXXXX</li>
-                            <li>XXXX</li>
+                            <li>Global leading software technology company</li>
+                            <li>World's largest social media service</li>
+                            <li>World's largest search engine company</li>
+                            <li>World's largest e-commerce company</li>
                         </ul>
                     </div>
                 </div>
             </section>
         </main>
         <Footer />
+        
+        <script>
+            // wait for DOM
+            document.addEventListener('DOMContentLoaded', () => {
+                let slideIndex = 1;
+                const slides = document.getElementsByClassName("slides");
+                const dots = document.getElementsByClassName("dot");
+
+                // show first slide
+                showSlides(slideIndex);
+
+                // bind functions to window
+                window.changeSlide = function(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                window.currentSlide = function(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    if (n > slides.length) {slideIndex = 1}
+                    if (n < 1) {slideIndex = slides.length}
+
+                    for (let i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+
+                    slides[slideIndex-1].style.display = "block";
+                    dots[slideIndex-1].className += " active";
+                }
+
+                // auto play
+                setInterval(() => {
+                    window.changeSlide(1);
+                }, 5000);
+            });
+        </script>
     </body>
 </html>
 
@@ -94,12 +157,12 @@ import FormattedDate from '../../components/FormattedDate.astro';
         gap: 2rem;
         max-width: 1200px;
         margin: 0 auto;
-        min-height: 300px; /* 確保有足夠的高度 */
+        min-height: 300px; /*/
     }
 
     .logo-container {
         flex-shrink: 0;
-        width: 200px; /* 固定 logo 容器寬度 */
+        width: 200px; /
     }
 
     .logo-container img {
@@ -109,9 +172,9 @@ import FormattedDate from '../../components/FormattedDate.astro';
     }
 
     .title-container {
-        flex-grow: 1; /* 允許標題容器成長 */
+        flex-grow: 1; /
         text-align: center;
-        min-width: 400px; /* 確保有最小寬度 */
+        min-width: 400px; /
     }
 
     .company-name,
@@ -232,6 +295,82 @@ import FormattedDate from '../../components/FormattedDate.astro';
         margin: 0 auto;
     }
 
+    .slideshow-container {
+        position: relative;
+        max-width: 1800px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .slides {
+        display: none;
+    }
+
+    .slides img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+    }
+
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 24px;
+        background: rgba(0,0,0,0.3);
+        border: none;
+        border-radius: 50%;
+        transition: 0.3s ease;
+    }
+
+    .next {
+        right: 20px;
+    }
+
+    .prev {
+        left: 20px;
+    }
+
+    .prev:hover, .next:hover {
+        background: rgba(0,0,0,0.8);
+    }
+
+    .dots {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .dot {
+        cursor: pointer;
+        height: 12px;
+        width: 12px;
+        margin: 0 4px;
+        background-color: rgba(255,255,255,0.5);
+        border-radius: 50%;
+        display: inline-block;
+        transition: 0.3s ease;
+    }
+
+    .active, .dot:hover {
+        background-color: white;
+    }
+
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+
     @media (max-width: 768px) {
         .hero-section {
             flex-direction: column;
@@ -244,7 +383,7 @@ import FormattedDate from '../../components/FormattedDate.astro';
         }
 
         .title-container {
-            min-width: unset; /* 移除最小寬度限制 */
+            min-width: unset; /*/
             width: 100%;
             padding: 0 1rem;
         }
@@ -271,6 +410,15 @@ import FormattedDate from '../../components/FormattedDate.astro';
 
         .clients-grid {
             grid-template-columns: repeat(2, 1fr);
+        }
+
+        .slides img {
+            height: 300px;
+        }
+
+        .prev, .next {
+            padding: 12px;
+            font-size: 18px;
         }
     }
 </style>

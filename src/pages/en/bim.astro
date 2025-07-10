@@ -1,0 +1,238 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+    title="BIM/CAD Engineering Design"
+    description="T-Vetas Network specializes in 2D/3D modeling and collaborative design for data center telecom systems"
+    lang="en"
+>
+    <div class="bim-container">
+        <section class="intro-section">
+            <h1 class="page-title">BIM/CAD Engineering & Modeling</h1>
+            <p class="intro-text">
+                Using advanced BIM (Building Information Modeling) and CAD technologies, we deliver precise telecom system design and modeling services to ensure project success.
+            </p>
+        </section>
+
+        <section class="features-section">
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h2>CAD Design Services</h2>
+                    <ul>
+                        <li>2D construction drawings</li>
+                        <li>3D modeling and visualization</li>
+                        <li>Accurate bill of materials</li>
+                        <li>Design change tracking</li>
+                        <li>Version and document control</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h2>BIM Advantages</h2>
+                    <ul>
+                        <li>Clash detection</li>
+                        <li>Cross-team collaboration</li>
+                        <li>Construction progress simulation</li>
+                        <li>As-built model creation</li>
+                        <li>Facility information management</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h2>Applications</h2>
+                    <ul>
+                        <li>Data center cabling systems</li>
+                        <li>Telecom room equipment layout</li>
+                        <li>Cable pathway planning</li>
+                        <li>MEP integration</li>
+                        <li>Space optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="workflow-section">
+            <h2 class="section-title">Workflow</h2>
+            <div class="workflow-steps">
+                <div class="step">
+                    <span class="step-number">01</span>
+                    <h3>Requirement Analysis</h3>
+                    <p>Understand project needs and define modeling scope</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">02</span>
+                    <h3>Preliminary Design</h3>
+                    <p>Conceptual design and system planning</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">03</span>
+                    <h3>Detailed Modeling</h3>
+                    <p>Perform detailed 3D modeling and clash checks</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">04</span>
+                    <h3>Coordination</h3>
+                    <p>Integrate with all systems for optimization</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Need professional BIM/CAD services?</h2>
+                <p>Our team has extensive telecom modeling experience. Let's discuss your project requirements.</p>
+                <a href="/en/about#contact" class="cta-button">Contact Us</a>
+            </div>
+        </section>
+    </div>
+</Layout>
+
+<style>
+.bim-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.intro-section {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.page-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #1A2A47;
+    margin-bottom: 1rem;
+}
+
+.intro-text {
+    color: #4a5568;
+    font-size: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.feature-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.feature-card h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2D3748;
+    margin-bottom: 1rem;
+}
+
+.feature-card ul {
+    list-style-type: disc;
+    padding-left: 1.25rem;
+    color: #4a5568;
+    font-size: 0.9rem;
+}
+
+.feature-card li {
+    margin-bottom: 0.5rem;
+}
+
+.workflow-section {
+    margin: 4rem 0;
+}
+
+.section-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.workflow-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.step {
+    text-align: center;
+}
+
+.step-number {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    background: #44B3FF;
+    color: white;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.step h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.step p {
+    font-size: 0.9rem;
+    color: #4a5568;
+}
+
+.cta-section {
+    background: #f7fafc;
+    padding: 3rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.cta-content h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    font-size: 0.9rem;
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #44B3FF;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.cta-button:hover {
+    background: #3182CE;
+}
+
+@media (max-width: 768px) {
+    .bim-container {
+        padding: 1rem;
+    }
+
+    .workflow-steps {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
