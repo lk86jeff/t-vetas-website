@@ -6,12 +6,40 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { defaultLang } from '../consts';
 
 return Astro.redirect(`/${defaultLang}`);
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "T-Vetas Network",
+  "url": "https://t-vetas.com",
+  "logo": "https://t-vetas.com/logo.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "3F., No. 283, Sec. 2, Tiding Blvd., Neihu Dist.",
+    "addressLocality": "Taipei City",
+    "postalCode": "114064",
+    "addressCountry": "TW"
+  },
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "telephone": "+8867010185099",   // 建議保留 E.164 標準含 +886
+    "contactType": "sales",
+    "email": "sales@t-vetas.com.tw",
+    "areaServed": "APAC",
+    "availableLanguage": ["en", "zh"]
+  }],
+  "sameAs": [
+    "https://www.linkedin.com/company/t-vetas"
+  ]
+};
 ---
 
 <!doctype html>
 <html lang="zh-TW">
     <head>
         <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+        <script type="application/ld+json" is:inline>
+        {JSON.stringify(orgSchema)}
+        </script>
     </head>
     <body>
         <Header />
