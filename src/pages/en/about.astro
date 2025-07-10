@@ -9,7 +9,9 @@ import Layout from '../../layouts/Layout.astro';
 >
     <div class="about-container">
         <h1 class="main-title">About Us</h1>
-
+            <p class="mission-tagline">
+              <strong>Mission:</strong> Deliver high-quality, scalable, and cost-effective infrastructure for the world’s leading telecom and enterprise clients.
+            </p>
         <!-- Company Introduction -->
         <section class="company-intro">
             <p class="intro-text">
@@ -22,7 +24,7 @@ import Layout from '../../layouts/Layout.astro';
         <section class="team-expertise">
             <h2>Our Expertise</h2>
             <p>
-                More than <strong>70&nbsp;% of our staff have over 10&nbsp;years of industry experience</strong>, covering the complete service flow of  
+                More than <strong>70&nbsp;% of our team have 10+ years of industry experience</strong>, covering the complete service flow of  
                 <span class="service-flow">Planning &amp; Design → Installation → On-site Commissioning → Ongoing Maintenance</span>.  
                 This enables us to deliver large-scale data center and cross-border optical-transmission projects with proven success.
             </p>
@@ -82,7 +84,7 @@ import Layout from '../../layouts/Layout.astro';
                     <h3>Business Inquiries</h3>
                     <p>Tel: +886-70-101-85099</p>
                     <p>Email: sales@t-vetas.com.tw</p>
-                    <p>Service Hours: Monday – Friday, 09:00 – 18:00 (UTC+8)</p>
+                    <p>Service Hours: <br>Monday – Friday,<br> 09:00 – 18:00 (UTC+8)</p>
                 </div>
 
                 <div class="contact-card">
@@ -298,5 +300,12 @@ strong {
     .map-wrapper {
         padding-bottom: 75%; /* 在手機上使用更高的比例 */
     }
+}
+.mission-tagline {
+  margin-top: 0.5rem;      /* 與 H1 稍作間距 */
+  font-size: 1.125rem;     /* 18px；視情況調整 */
+  line-height: 1.5;
+  font-weight: 500;
+  color: #44B3FF;          /* 置換為你的品牌主色 */
 }
 </style>
