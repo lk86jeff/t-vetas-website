@@ -21,7 +21,7 @@ const orgSchema = {
   },
   "contactPoint": [{
     "@type": "ContactPoint",
-    "telephone": "+8867010185099",   // 建議保留 E.164 標準含 +886
+    "telephone": "+8867010185099",
     "contactType": "sales",
     "email": "sales@t-vetas.com.tw",
     "areaServed": "APAC",
@@ -38,9 +38,7 @@ const orgSchema = {
     <head>
         <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
         
-        <script type="application/ld+json" is:inline>
-        {JSON.stringify(orgSchema)}
-        </script>
+        <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
     </head>
     <body>
         <Header />
