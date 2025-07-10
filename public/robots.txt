@@ -1,2 +1,4 @@
 User-agent: *
 Disallow:
+
+Sitemap: https://t-vetas.com/sitemap.xml
